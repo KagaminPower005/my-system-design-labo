@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/out/production/MySystemDesignLabo" />
+    <output-test url="file://$MODULE_DIR$/out/test/MySystemDesignLabo" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/AD20211005_「社員勤務表」の選択肢/FirstTime">
       <sourceFolder url="file://$MODULE_DIR$/AD20211005_「社員勤務表」の選択肢/FirstTime/src/main/java" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/AD20211005_「社員勤務表」の選択肢/FirstTime/お蔵入り" />
-      <excludeFolder url="file://$MODULE_DIR$/AD20211005_「社員勤務表」の選択肢/FirstTime/ビジネス分析" />
-      <excludeFolder url="file://$MODULE_DIR$/AD20211005_「社員勤務表」の選択肢/FirstTime/設計書" />
+      <sourceFolder url="file://$MODULE_DIR$/AD20211005_「社員勤務表」の選択肢/FirstTime/お蔵入り/FirstTime/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
