@@ -14,7 +14,8 @@ public class 勤務区分問合せサービス {
     public 勤務区分問合せサービス(String my勤務状況){
         try {  勤務状況.valueOf(my勤務状況);  }
         catch (IllegalArgumentException e) {
-               System.out.println("その値は勤務状況には存在しません"); }
+            System.out.println("その値は勤務状況には存在しません");
+        }
         this.my勤務状況 = my勤務状況;
     }
     public List<String> 勤務区分List(){
