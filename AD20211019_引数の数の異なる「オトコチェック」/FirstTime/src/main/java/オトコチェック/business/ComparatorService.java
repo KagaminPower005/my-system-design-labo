@@ -2,6 +2,7 @@ package オトコチェック.business;
 
 import オトコチェック.domain.model.Oujisama;
 import オトコチェック.domain.model.WeightComparator;
+import オトコチェック.domain.model.HeightComparator;
 
 //比較サービス
 class ComparatorService {
