@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/AD20211005_「社員勤務表」の選択肢/SecondTime/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/AD20211019_引数の数の異なる「オトコチェック」/FirstTime/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />

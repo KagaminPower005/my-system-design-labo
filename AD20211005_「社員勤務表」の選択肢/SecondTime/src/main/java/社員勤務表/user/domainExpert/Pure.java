@@ -2,11 +2,13 @@ package 社員勤務表.user.domainExpert;
 
 import 社員勤務表.business.service.勤務区分問合せサービス;
 import 社員勤務表.business.service.勤務状況サブステータス区分問合せサービス;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Pure {
-    private static ArrayList<String> my勤務区分list = new ArrayList<>();
-    private static ArrayList<String> my勤務状況サブステータス区分list = new ArrayList<>();
+    private static List<String> my勤務区分list = new ArrayList<>();
+    private static List<String> my勤務状況サブステータス区分list = new ArrayList<>();
 
     public static void main(String args[]){
         final String my勤務状況 = args[0];
