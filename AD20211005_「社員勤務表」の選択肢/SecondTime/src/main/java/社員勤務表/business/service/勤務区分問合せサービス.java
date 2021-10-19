@@ -1,8 +1,6 @@
 package 社員勤務表.business.service;
 
 import 社員勤務表.domain.model.勤務区分;
-import 社員勤務表.domain.model.勤務状況;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,22 +11,17 @@ public class 勤務区分問合せサービス {
     private List<String> my勤務区分list = new ArrayList<>();
 
     public 勤務区分問合せサービス(String my勤務状況){
-        try {
-            勤務状況.valueOf(my勤務状況);
-            //テレワーク休止
-            if(my勤務状況.equals(勤務状況.テレワーク.name())){
-                throw new IllegalArgumentException();
-            }
-            this.my勤務状況 = my勤務状況;
-        }
-        catch (IllegalArgumentException e) {
-            System.out.println("その値は勤務状況には存在しません");
-        }
+        勤務状況判定サービス my勤務状況判定 = new 勤務状況判定サービス(my勤務状況);
+
+        if(my勤務状況判定.is非該当()) { System.out.println("その値は勤務状況には存在しません"); }
+        else { this.my勤務状況 = my勤務状況; }
     }
     public List<String> 勤務区分List(){
-        if(my勤務状況.equals(勤務状況.テレワーク.name())) { return テレワーク設定(); }
-        if(my勤務状況.equals(勤務状況.出社.name()))      { return 出社設定(); }
-        if(my勤務状況.equals(勤務状況.非出社.name()))     { return 非出社設定(); }
+        勤務状況判定サービス my勤務状況判定 = new 勤務状況判定サービス(my勤務状況);
+
+        if(my勤務状況判定.isテレワーク()) {return テレワーク設定(); }
+        if(my勤務状況判定.is出社())      {return 出社設定(); }
+        if(my勤務状況判定.is非出社())     {return 非出社設定(); }
         else{ my勤務区分list.clear(); }
 
         return  Collections.unmodifiableList(my勤務区分list);
