@@ -19,9 +19,9 @@ public class 勤務区分問合せサービス {
         this.my勤務状況 = my勤務状況;
     }
     public List<String> 勤務区分List(){
-        if(this.my勤務状況.equals(勤務状況.テレワーク.toString()))  { テレワーク設定(); }
-        if(this.my勤務状況.equals(勤務状況.出社.toString()))       { 出社設定(); }
-        if(this.my勤務状況.equals(勤務状況.非出社.toString()))      { 非出社設定(); }
+        if(my勤務状況.equals(勤務状況.テレワーク.name())) { テレワーク設定(); }
+        if(my勤務状況.equals(勤務状況.出社.name()))      { 出社設定(); }
+        if(my勤務状況.equals(勤務状況.非出社.name()))    { 非出社設定(); }
         return  Collections.unmodifiableList(my勤務区分list);
     }
     private void テレワーク設定(){

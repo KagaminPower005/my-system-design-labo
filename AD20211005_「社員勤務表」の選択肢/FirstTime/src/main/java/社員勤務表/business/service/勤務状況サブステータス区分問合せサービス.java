@@ -21,18 +21,21 @@ public class 勤務状況サブステータス区分問合せサービス {
         this.my勤務状況 = my勤務状況;
     }
     public List<String> 勤務状況サブステータス区分List(){
-        if(this.my勤務状況.equals(勤務状況.テレワーク.toString()))  { テレワーク設定(); }
-        if(this.my勤務状況.equals(勤務状況.出社.toString()))       { 出社設定(); }
-        if(this.my勤務状況.equals(勤務状況.非出社.toString()))      { 非出社設定(); }
+        if(my勤務状況.equals(勤務状況.テレワーク.name())) { テレワーク設定(); }
+        if(my勤務状況.equals(勤務状況.出社.name()))      { 出社設定(); }
+        if(my勤務状況.equals(勤務状況.非出社.name()))    { 非出社設定(); }
         return Collections.unmodifiableList(my勤務状況サブステータス区分list);
     }
     private void テレワーク設定(){
+
         my勤務状況サブステータス区分list.add(場所区分.社外.toString());
     }
     private void 出社設定() {
+
         my勤務状況サブステータス区分list.add(場所区分.社内.toString());
     }
     private void 非出社設定() {
+
         my勤務状況サブステータス区分list.add(状態区分.非稼働.toString());
     }
 }
