@@ -28,14 +28,14 @@ public class 勤務状況サブステータス区分問合せサービス {
     }
     private void テレワーク設定(){
 
-        my勤務状況サブステータス区分list.add(場所区分.社外.toString());
+        my勤務状況サブステータス区分list.add(場所区分.社外.name());
     }
     private void 出社設定() {
 
-        my勤務状況サブステータス区分list.add(場所区分.社内.toString());
+        my勤務状況サブステータス区分list.add(場所区分.社内.name());
     }
     private void 非出社設定() {
 
-        my勤務状況サブステータス区分list.add(状態区分.非稼働.toString());
+        my勤務状況サブステータス区分list.add(状態区分.非稼働.name());
     }
 }

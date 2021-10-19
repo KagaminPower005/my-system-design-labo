@@ -25,18 +25,18 @@ public class 勤務区分問合せサービス {
         return  Collections.unmodifiableList(my勤務区分list);
     }
     private void テレワーク設定(){
-        my勤務区分list.add(勤務区分.フル出勤.toString());
-        my勤務区分list.add(勤務区分.午前休.toString());
-        my勤務区分list.add(勤務区分.午後休.toString());
+        my勤務区分list.add(勤務区分.フル出勤.name());
+        my勤務区分list.add(勤務区分.午前休.name());
+        my勤務区分list.add(勤務区分.午後休.name());
     }
     private void 出社設定(){
-        my勤務区分list.add(勤務区分.フル出勤.toString());
-        my勤務区分list.add(勤務区分.午前休.toString());
-        my勤務区分list.add(勤務区分.午後休.toString());
+        my勤務区分list.add(勤務区分.フル出勤.name());
+        my勤務区分list.add(勤務区分.午前休.name());
+        my勤務区分list.add(勤務区分.午後休.name());
     }
     private void 非出社設定(){
-        my勤務区分list.add(勤務区分.週休日.toString());
-        my勤務区分list.add(勤務区分.休暇.toString());
-        my勤務区分list.add(勤務区分.欠勤.toString());
+        my勤務区分list.add(勤務区分.週休日.name());
+        my勤務区分list.add(勤務区分.休暇.name());
+        my勤務区分list.add(勤務区分.欠勤.name());
     }
 }
