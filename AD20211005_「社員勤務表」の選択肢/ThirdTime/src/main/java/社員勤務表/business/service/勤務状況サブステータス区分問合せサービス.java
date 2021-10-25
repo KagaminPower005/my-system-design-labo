@@ -1,8 +1,8 @@
 package 社員勤務表.business.service;
 
+import 社員勤務表.business.adapter.勤務状況サブステータス区分アダプター;
 import 社員勤務表.domain.model.状態区分;
 import 社員勤務表.domain.model.場所区分;
-
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +10,8 @@ import java.util.Collections;
 public class 勤務状況サブステータス区分問合せサービス {
 
     private String my勤務状況 = "";
-    private List<String> my勤務状況サブステータス区分list = new ArrayList<>();
+    private List<勤務状況サブステータス区分アダプター> my勤務状況サブステータス区分list
+            = new ArrayList<>();
 
     public 勤務状況サブステータス区分問合せサービス(String my勤務状況){
         勤務状況判定サービス my勤務状況判定 = new 勤務状況判定サービス(my勤務状況);
@@ -18,7 +19,7 @@ public class 勤務状況サブステータス区分問合せサービス {
         if(my勤務状況判定.is非該当()){ System.out.println("その値は勤務状況には存在しません"); }
         else{ this.my勤務状況 = my勤務状況; }
     }
-    public List<String> 勤務状況サブステータス区分List(){
+    public List<勤務状況サブステータス区分アダプター> 勤務状況サブステータス区分List(){
         勤務状況判定サービス my勤務状況判定 = new 勤務状況判定サービス(my勤務状況);
 
         if(my勤務状況判定.isテレワーク()) { return テレワーク設定(); }
@@ -28,18 +29,18 @@ public class 勤務状況サブステータス区分問合せサービス {
 
         return  Collections.unmodifiableList(my勤務状況サブステータス区分list);
     }
-    private List<String> テレワーク設定(){
-        my勤務状況サブステータス区分list.add(場所区分.社外.name());
+    private List<勤務状況サブステータス区分アダプター> テレワーク設定(){
+        my勤務状況サブステータス区分list.add(new 勤務状況サブステータス区分アダプター(場所区分.社外));
 
         return Collections.unmodifiableList(my勤務状況サブステータス区分list);
     }
-    private List<String> 出社設定() {
-        my勤務状況サブステータス区分list.add(場所区分.社内.name());
+    private List<勤務状況サブステータス区分アダプター> 出社設定() {
+        my勤務状況サブステータス区分list.add(new 勤務状況サブステータス区分アダプター(場所区分.社内));
 
         return Collections.unmodifiableList(my勤務状況サブステータス区分list);
     }
-    private List<String> 非出社設定() {
-        my勤務状況サブステータス区分list.add(状態区分.非稼働.name());
+    private List<勤務状況サブステータス区分アダプター> 非出社設定() {
+        my勤務状況サブステータス区分list.add(new 勤務状況サブステータス区分アダプター(場所区分.社外));
 
         return Collections.unmodifiableList(my勤務状況サブステータス区分list);
     }
