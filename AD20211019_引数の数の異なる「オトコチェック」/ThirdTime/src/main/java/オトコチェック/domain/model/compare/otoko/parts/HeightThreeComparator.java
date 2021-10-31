@@ -22,7 +22,7 @@ public class HeightThreeComparator implements ThreeComparatorStrategy {
             int weight = o2.体重();
             int height = o1.身長();
             int age = o2.年齢();
-            return new 王子様(name, weight, height, age);
+            return new 王子様(name, height, weight, age);
         }
     }
 }

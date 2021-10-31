@@ -43,7 +43,7 @@ public class 王子様 {
             my非該当箇所 = my年齢.getClass().getSimpleName() + ":" + my年齢.value() ;
         }
 
-        else{ my非該当箇所 = "誤った設定は1つもございません。"; }
+        if( my非該当箇所.isEmpty() ){ my非該当箇所 = "誤った設定は1つもございません。"; }
 
         return my非該当箇所;
     }

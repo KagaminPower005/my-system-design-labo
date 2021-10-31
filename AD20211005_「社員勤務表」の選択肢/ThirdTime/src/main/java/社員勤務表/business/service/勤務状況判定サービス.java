@@ -4,7 +4,7 @@ import 社員勤務表.domain.model.勤務状況;
 
 public class 勤務状況判定サービス {
 
-    private String my勤務状況 = "";
+    private final String my勤務状況;
 
     public 勤務状況判定サービス(String my勤務状況){
         this.my勤務状況 = my勤務状況;

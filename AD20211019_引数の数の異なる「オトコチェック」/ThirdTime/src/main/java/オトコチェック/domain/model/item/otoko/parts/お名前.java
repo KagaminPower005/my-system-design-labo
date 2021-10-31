@@ -4,7 +4,7 @@ import オトコチェック.domain.tool.非該当判断;
 
 public class お名前 {
     private String お名前 = "(名無しの権兵衛)";
-    private static final int 許容最大文字数 = 20;
+    private static final int 許容最大文字数 = 30;
     private static final int 許容最小文字数 = 0;
 
     public お名前(String お名前){

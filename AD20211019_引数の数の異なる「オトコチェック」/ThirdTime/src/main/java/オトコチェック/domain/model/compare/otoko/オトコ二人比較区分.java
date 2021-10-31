@@ -7,12 +7,11 @@ import オトコチェック.domain.model.item.otoko.王子様;
 
 public enum オトコ二人比較区分 {
      身長( new HeightComparator())
-    ,体重( new WeightComparator())
-    ,年齢( null);
+    ,体重( new WeightComparator());
 
      private ComparatorStrategy myComparatorStrategy;
 
-     private オトコ二人比較区分(ComparatorStrategy myComparatorStrategy){
+     オトコ二人比較区分(ComparatorStrategy myComparatorStrategy){
          this.myComparatorStrategy = myComparatorStrategy;
      }
 

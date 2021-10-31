@@ -16,10 +16,10 @@ public class HeightThreeComparator implements ThreeComparatorStrategy {
         if (o1.身長() < o2.身長()) { return o2; }
         else {
             String name = o1.お名前() + "♪" + o2.お名前();
-            int weight = -1;
+            int weight = o2.体重();
             int height = o1.身長();
-            int age = -1;
-            return new 王子様(name, weight, height, age);
+            int age = o2.年齢();
+            return new 王子様(name, height, weight, age);
         }
     }
 }

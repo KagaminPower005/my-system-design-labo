@@ -5,13 +5,11 @@ import オトコチェック.domain.model.item.message.回答;
 import オトコチェック.domain.model.item.otoko.王子様;
 
 public enum オトコ三人比較区分 {
-     身長( new HeightThreeComparator())
-    ,体重( null)
-    ,年齢( null);
+     身長( new HeightThreeComparator());
 
      private ThreeComparatorStrategy myThreeComparatorStrategy;
 
-     private オトコ三人比較区分(ThreeComparatorStrategy myThreeComparatorStrategy){
+     オトコ三人比較区分(ThreeComparatorStrategy myThreeComparatorStrategy){
          this.myThreeComparatorStrategy = myThreeComparatorStrategy;
      }
 
