@@ -1,6 +1,5 @@
 package オトコチェック.business.service;
 
-import オトコチェック.domain.model.compare.otoko.オトコ三人比較区分;
 import オトコチェック.domain.model.compare.otoko.オトコ二人比較区分;
 import オトコチェック.domain.model.item.message.回答;
 

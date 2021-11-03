@@ -13,11 +13,11 @@ public enum 比較区分 {
      private ThreeComparatorStrategy myThreeComparatorStrategy;
      private ComparatorStrategy myComparatorStrategy;
 
-     private 比較区分(ThreeComparatorStrategy myThreeComparatorStrategy){
+     比較区分(ThreeComparatorStrategy myThreeComparatorStrategy){
          this.myThreeComparatorStrategy = myThreeComparatorStrategy;
      }
 
-     private 比較区分(ComparatorStrategy myComparatorStrategy){
+     比較区分(ComparatorStrategy myComparatorStrategy){
          this.myComparatorStrategy = myComparatorStrategy;
      }
 

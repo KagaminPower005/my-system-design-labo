@@ -1,5 +1,6 @@
 package オトコチェック.domain.model.item.otoko;
 
+import オトコチェック.domain.model.item.message.回答;
 import オトコチェック.domain.model.item.otoko.parts.*;
 
 public class 王子様 {
@@ -24,7 +25,7 @@ public class 王子様 {
         else{ return false; }
     }
 
-    public String 非該当箇所(){
+    public 回答 非該当箇所(){
         String my非該当箇所 = "";
 
         if(myお名前.is非該当()){
@@ -45,22 +46,22 @@ public class 王子様 {
 
         if( my非該当箇所.isEmpty() ){ my非該当箇所 = "誤った設定は1つもございません。"; }
 
-        return my非該当箇所;
+        return new 回答( my非該当箇所 );
     }
 
     public String お名前(){
         return myお名前.value();
     }
 
-    public int 身長(){
+    public Integer 身長(){
         return my身長.value();
     }
 
-    public int 体重(){
+    public Integer 体重(){
         return my体重.value();
     }
 
-    public int 年齢(){
+    public Integer 年齢(){
         return my年齢.value();
     }
 }
