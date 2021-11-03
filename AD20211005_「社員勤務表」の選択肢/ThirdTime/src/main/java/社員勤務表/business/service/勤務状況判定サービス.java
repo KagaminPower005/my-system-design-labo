@@ -13,9 +13,11 @@ public class 勤務状況判定サービス {
     public Boolean is非該当(){
         try {
             勤務状況.valueOf(my勤務状況);
+
             //緊急事態宣言長期休止によりテレワーク休止
             if(this.isテレワーク()){ return true; }
-            else{ return false; }
+
+            return false;
         }
         catch (IllegalArgumentException e) {
             return true;

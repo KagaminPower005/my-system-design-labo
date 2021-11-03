@@ -14,11 +14,14 @@ public class 三人比較可能判定サービス {
 
     public Boolean is非該当() {
         try {
-            if (my人数 == 3) { オトコ三人比較区分.valueOf(my比較内容); }
-            return false;
+              オトコ三人比較区分.valueOf(my比較内容);
+
+              if (my人数 != 3) { return true; }
+
+              return false;
             }
         catch (IllegalArgumentException e) {
-            return true;
+              return true;
             }
     }
 

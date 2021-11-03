@@ -1,5 +1,6 @@
 package オトコチェック.business.service;
 
+import オトコチェック.domain.model.compare.otoko.オトコ三人比較区分;
 import オトコチェック.domain.model.compare.otoko.オトコ二人比較区分;
 import オトコチェック.domain.model.item.message.回答;
 
@@ -14,7 +15,10 @@ public class 二人比較可能判定サービス {
 
     public Boolean is非該当() {
         try {
-              if (my人数 == 2){ オトコ二人比較区分.valueOf(my比較内容); }
+              オトコ二人比較区分.valueOf(my比較内容);
+
+              if (my人数 != 2) { return true; }
+
               return false;
              }
         catch (IllegalArgumentException e) {
