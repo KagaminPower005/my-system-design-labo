@@ -9,7 +9,7 @@ import java.util.Collections;
 
 public class 勤務状況サブステータス区分問合せサービス {
 
-    private final String my勤務状況 ;
+    private String my勤務状況 = "" ;
     private List<勤務状況サブステータス区分アダプター> my勤務状況サブステータス区分list
             = new ArrayList<>();
 
@@ -17,8 +17,7 @@ public class 勤務状況サブステータス区分問合せサービス {
         勤務状況判定サービス my勤務状況判定 = new 勤務状況判定サービス(my勤務状況);
 
         if(my勤務状況判定.is非該当()){ System.out.println("その値は勤務状況には存在しません"); }
-
-        this.my勤務状況 = my勤務状況;
+        else{ this.my勤務状況 = my勤務状況; }
     }
     public List<勤務状況サブステータス区分アダプター> 勤務状況サブステータス区分List(){
         勤務状況判定サービス my勤務状況判定 = new 勤務状況判定サービス(my勤務状況);

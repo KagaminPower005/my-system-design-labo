@@ -22,6 +22,6 @@ public class 勤務状況サブステータス区分アダプター {
 
     public final String 補足説明(){
         if( my状態区分 != null ){ return my状態区分.補足説明(); }
-        else{ return my場所区分.補足説明(); }
+        else{ return my場所区分.詳細説明(); }
     }
 }
