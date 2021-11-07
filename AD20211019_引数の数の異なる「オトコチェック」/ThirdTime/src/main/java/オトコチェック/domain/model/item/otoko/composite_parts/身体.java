@@ -1,6 +1,9 @@
-package オトコチェック.domain.model.item.otoko.parts;
+package オトコチェック.domain.model.item.otoko.composite_parts;
 
 import オトコチェック.domain.model.item.message.回答;
+import オトコチェック.domain.model.item.otoko.parts.体重;
+import オトコチェック.domain.model.item.otoko.parts.年齢;
+import オトコチェック.domain.model.item.otoko.parts.身長;
 
 public class 身体 {
     private 身長 my身長;

@@ -1,6 +1,7 @@
 package オトコチェック.domain.model.item.otoko;
 
 import オトコチェック.domain.model.item.message.回答;
+import オトコチェック.domain.model.item.otoko.composite_parts.身体;
 import オトコチェック.domain.model.item.otoko.parts.*;
 
 public class 王子様 {
