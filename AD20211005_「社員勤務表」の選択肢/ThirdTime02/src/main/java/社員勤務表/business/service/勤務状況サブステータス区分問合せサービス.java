@@ -1,6 +1,5 @@
 package 社員勤務表.business.service;
 
-import 社員勤務表.domain.model.勤務状況サブステータス区分;
 import 社員勤務表.domain.model.状態区分;
 import 社員勤務表.domain.model.場所区分;
 import java.util.List;
@@ -11,7 +10,7 @@ public class 勤務状況サブステータス区分問合せサービス {
 
     private String my勤務状況 = "" ;
     private List<勤務状況サブステータス区分> my勤務状況サブステータス区分list
-            = new ArrayList<勤務状況サブステータス区分>();
+            = new ArrayList<>();
 
     public 勤務状況サブステータス区分問合せサービス(String my勤務状況){
         勤務状況判定サービス my勤務状況判定 = new 勤務状況判定サービス(my勤務状況);

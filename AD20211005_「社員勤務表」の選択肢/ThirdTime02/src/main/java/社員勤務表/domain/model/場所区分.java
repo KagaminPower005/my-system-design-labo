@@ -1,6 +1,8 @@
 package 社員勤務表.domain.model;
 
-public enum 場所区分 implements 勤務状況サブステータス区分{
+import 社員勤務表.business.service.勤務状況サブステータス区分;
+
+public enum 場所区分 implements 勤務状況サブステータス区分 {
     社外,
     社内;
 

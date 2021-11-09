@@ -1,5 +1,7 @@
 package 社員勤務表.domain.model;
 
+import 社員勤務表.business.service.勤務状況サブステータス区分;
+
 public enum 状態区分 implements 勤務状況サブステータス区分 {
     稼働,
     非稼働;

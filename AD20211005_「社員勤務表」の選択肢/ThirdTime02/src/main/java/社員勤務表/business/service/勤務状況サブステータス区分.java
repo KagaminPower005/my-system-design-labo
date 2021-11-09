@@ -1,4 +1,4 @@
-package 社員勤務表.domain.model;
+package 社員勤務表.business.service;
 
 public interface 勤務状況サブステータス区分 {
     String name();

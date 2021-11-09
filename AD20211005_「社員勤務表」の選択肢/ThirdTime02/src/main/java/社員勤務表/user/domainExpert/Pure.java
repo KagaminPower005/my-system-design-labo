@@ -3,7 +3,7 @@ package 社員勤務表.user.domainExpert;
 import 社員勤務表.business.service.勤務区分問合せサービス;
 import 社員勤務表.business.service.勤務状況サブステータス区分問合せサービス;
 import 社員勤務表.domain.model.勤務区分;
-import 社員勤務表.domain.model.勤務状況サブステータス区分;
+import 社員勤務表.business.service.勤務状況サブステータス区分;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Pure {
     private static List<勤務状況サブステータス区分> my勤務状況サブステータス区分list
             = new ArrayList<>();
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         final String my勤務状況 = args[0];
 
         勤務区分問合せ(my勤務状況);
