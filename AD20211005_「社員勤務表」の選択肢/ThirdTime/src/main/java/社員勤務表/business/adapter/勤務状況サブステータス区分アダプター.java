@@ -1,5 +1,7 @@
 package 社員勤務表.business.adapter;
 
+import 社員勤務表.business.tool.状態区分判定;
+import 社員勤務表.business.tool.場所区分判定;
 import 社員勤務表.domain.model.状態区分;
 import 社員勤務表.domain.model.場所区分;
 
@@ -16,12 +18,15 @@ public class 勤務状況サブステータス区分アダプター {
     }
 
     public final String name(){
-        if( my状態区分 != null ){ return my状態区分.name(); }
-        else{ return my場所区分.name(); }
+        if( new 状態区分判定(my状態区分).is有効() ){ return my状態区分.name(); }
+        if( new 場所区分判定(my場所区分).is有効() ){ return my場所区分.name();}
+        else{ return "該当する値がございません"; }
     }
 
     public final String 補足説明(){
-        if( my状態区分 != null ){ return my状態区分.補足説明(); }
-        else{ return my場所区分.詳細説明(); }
+        if( new 状態区分判定(my状態区分).is有効() ){ return my状態区分.補足説明(); }
+        //※例えば、「場所区分」はメソッド名が異なっていたりしていてもOK
+        if( new 場所区分判定(my場所区分).is有効() ){ return my場所区分.詳細説明(); }
+        else{ return "該当する値がございません"; }
     }
 }
