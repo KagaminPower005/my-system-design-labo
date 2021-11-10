@@ -4,10 +4,10 @@ import オトコチェック.business.service.オトコ比較サービス;
 import オトコチェック.domain.model.item.otoko.王子様;
 
 public class Delight {
-    public static void main(String args[]) {
-//        王子様 候補1 = new 王子様("ぱぁぱ",172,71,41);
+    public static void main(String[] args) {
+//        王子様 候補1 = new 王子様("じぃじ",180,68,70);
         王子様 候補2 = new 王子様("ぱぁぱ",172,71,41);
-//        王子様 候補3 = new 王子様("ぱぁぱ",172,71,41);
+//        王子様 候補3 = new 王子様("チェホンマン",218,160,40);
 
         オトコ比較サービス my体重比較 = new オトコ比較サービス(2,"体重");
         オトコ比較サービス my身長比較 = new オトコ比較サービス(3,"身長");
