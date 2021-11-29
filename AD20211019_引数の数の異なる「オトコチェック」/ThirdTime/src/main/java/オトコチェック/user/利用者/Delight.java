@@ -17,5 +17,6 @@ public class Delight {
         //If文スッキリ(⋈◍＞◡＜◍)。✧♡
         if (type.equals("痩せてる")){ System.out.println( my体重比較.二人比較( 候補2, 候補2 ).回答() + "大好き♪" ); }
         if (type.equals("背が高い")){ System.out.println( my身長比較.三人比較( 候補2, 候補2, 候補2 ).回答() + "大好き♪" ); }
+
     }
 }
