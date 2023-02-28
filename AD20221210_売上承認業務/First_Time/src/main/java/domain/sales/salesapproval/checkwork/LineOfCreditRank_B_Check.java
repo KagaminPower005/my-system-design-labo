@@ -7,7 +7,7 @@ public record LineOfCreditRank_B_Check(SalesAmount Amount, LineOfCreditRank Rank
         implements SalesApprovalChecks {
     public CheckResult check(){
         // 与信枠ランクが'B'のみ対応
-        if(this.Rank != LineOfCreditRank.B){ return CheckResult.MISMATCH; }
+        if(this.Rank != LineOfCreditRank.B){ return CheckResult.IGNORE; }
 
         // ランクBの顧客は、xxx万円を超えるご購入は不可
         final String myMoney = "350,000"
