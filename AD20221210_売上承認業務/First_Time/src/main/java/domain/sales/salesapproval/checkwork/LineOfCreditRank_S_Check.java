@@ -8,6 +8,6 @@ public record LineOfCreditRank_S_Check(LineOfCreditRank Rank)
         // 与信枠ランクが'S'の場合、すべて承認可
         if(this.Rank == LineOfCreditRank.S) { return CheckResult.OK; }
 
-        return CheckResult.IGNORE;
+        return CheckResult.MISS_MATCH;
     }
 }
