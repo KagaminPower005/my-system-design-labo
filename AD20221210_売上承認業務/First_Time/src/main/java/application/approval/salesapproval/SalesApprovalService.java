@@ -31,6 +31,8 @@ public class SalesApprovalService {
         myPolicy.addPolicy( new LineOfCreditRank_A_Check(myMoney,myRank) );
         //与信枠ランクBのチェック
         myPolicy.addPolicy( new LineOfCreditRank_B_Check(myMoney,myRank) );
+        //与信枠ランクCのチェック
+        myPolicy.addPolicy( new LineOfCreditRank_C_Check(myMoney,myRank) );
         //与信枠ランクZのチェック
         myPolicy.addPolicy( new LineOfCreditRank_Z_Check(myMoney,myRank) );
 

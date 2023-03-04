@@ -8,8 +8,8 @@ public class ApplicationOperator {
 
     public static void main(String[] args){
         // 端末でパラメータを入力
-        SalesAmount myMoney = new SalesAmount(1000001);
-        LineOfCreditRank myRank = LineOfCreditRank.S;
+        SalesAmount myMoney = new SalesAmount(180000);
+        LineOfCreditRank myRank = LineOfCreditRank.C;
 
         // サービスが起動
         SalesApprovalService myService
