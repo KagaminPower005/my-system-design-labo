@@ -5,5 +5,6 @@ public enum LineOfCreditRank {
     A,
     B,
     C,
+    D,
     Z
 }
