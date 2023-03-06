@@ -1,7 +1,7 @@
 package application.approval.salesapproval;
 
 import domain.credit.blacklist.BlackListPersonRank;
-import domain.credit.exceptionlist.ExceptionPersonList;
+import domain.credit.exceptionlist.ExceptionPerson;
 import domain.sales.salesapproval.checkwork.*;
 import domain.sales.salesapproval.judgementwork.SalesApproval;
 import domain.sales.items.salesamount.SalesAmount;
@@ -13,20 +13,20 @@ public class SalesApprovalService {
 
     private final SalesAmount myMoney;
     private final LineOfCreditRank myCreditRank;
-    private final BlackListPersonRank myBlackListRank;
+    private final BlackListPersonRank myBlackListPersonRank;
 
-    private final ExceptionPersonList myExceptionListRank;
+    private final ExceptionPerson myExceptionPersonList;
 
 
     public SalesApprovalService(
             final SalesAmount myMoney
             , final LineOfCreditRank myCreditRank
-            , final BlackListPersonRank myBlackListRank
-            , final ExceptionPersonList myExceptionListRank){
+            , final BlackListPersonRank myBlackListPersonRank
+            , final ExceptionPerson myExceptionPersonList){
         this.myMoney = myMoney;
         this.myCreditRank = myCreditRank;
-        this.myBlackListRank = myBlackListRank;
-        this.myExceptionListRank = myExceptionListRank;
+        this.myBlackListPersonRank = myBlackListPersonRank;
+        this.myExceptionPersonList = myExceptionPersonList;
     }
 
     public Message run(){
@@ -47,10 +47,10 @@ public class SalesApprovalService {
         myPolicy.addPolicy( new LineOfCreditRank_C_Check(myMoney, myCreditRank) );
         //与信枠ランクZのチェック
         myPolicy.addPolicy( new LineOfCreditRank_Z_Check(myMoney, myCreditRank) );
-        // 相手先担当営業の人物チェック(※その(1)：ブラックリストチェック)
-        myPolicy.addPolicy( new UnBlackListPerson_Check(myBlackListRank, myCreditRank) );
-        // 相手先担当営業の人物チェック(※その(2)：ブラックリストの例外者チェック)
-        myPolicy.addPolicy( new ExceptionPersonList_Check(myExceptionListRank, myCreditRank) );
+        // 相手先担当営業の人物チェック(※その(1)：非ブラックリスト者チェック)
+        myPolicy.addPolicy( new UnBlackListPerson_Check(myBlackListPersonRank, myCreditRank) );
+        // 相手先担当営業の人物チェック(※その(2)：ブラックリスト者の例外者リストチェック)
+        myPolicy.addPolicy( new ExceptionPersonList_Check(myExceptionPersonList, myCreditRank) );
 
         // チェック処理の連続実行
         ApprovalCheckResultsChain myCheckResultsChain = myPolicy.execute();

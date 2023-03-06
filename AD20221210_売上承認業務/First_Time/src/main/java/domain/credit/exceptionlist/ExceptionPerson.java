@@ -1,6 +1,6 @@
 package domain.credit.exceptionlist;
 
-public enum ExceptionPersonList {
+public enum ExceptionPerson {
     TRUE,
     FALSE,
     UNKOWN
