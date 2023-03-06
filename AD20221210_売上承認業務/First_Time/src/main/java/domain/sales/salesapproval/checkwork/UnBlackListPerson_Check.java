@@ -3,7 +3,7 @@ package domain.sales.salesapproval.checkwork;
 import domain.credit.blacklist.BlackListPersonRank;
 import domain.credit.lineofcredit.LineOfCreditRank;
 
-public record BlackListPersonRank_Check(BlackListPersonRank BlackRank, LineOfCreditRank CreditRank)
+public record UnBlackListPerson_Check(BlackListPersonRank BlackRank, LineOfCreditRank CreditRank)
         implements SalesApprovalChecks {
     public CheckResult check(){
         // 与信枠ランクが'Z'は担当営業の人がどんな人だとしてもNG

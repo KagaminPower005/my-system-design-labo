@@ -1,6 +1,7 @@
 package application.approval.salesapproval;
 
 import domain.credit.blacklist.BlackListPersonRank;
+import domain.credit.exceptionlist.ExceptionPersonList;
 import domain.sales.salesapproval.checkwork.*;
 import domain.sales.salesapproval.judgementwork.SalesApproval;
 import domain.sales.items.salesamount.SalesAmount;
@@ -14,14 +15,18 @@ public class SalesApprovalService {
     private final LineOfCreditRank mylineOfCreditRank;
     private final BlackListPersonRank myBlackListRank;
 
+    private final ExceptionPersonList myExceptionListRank;
+
 
     public SalesApprovalService(
             final SalesAmount myMoney
             , final LineOfCreditRank mylineOfCreditRank
-            , final BlackListPersonRank myBlackListRank){
+            , final BlackListPersonRank myBlackListRank
+            , final ExceptionPersonList myExceptionListRank){
         this.myMoney = myMoney;
         this.mylineOfCreditRank = mylineOfCreditRank;
         this.myBlackListRank = myBlackListRank;
+        this.myExceptionListRank = myExceptionListRank;
     }
 
     public Message run(){
@@ -43,7 +48,9 @@ public class SalesApprovalService {
         //与信枠ランクZのチェック
         myPolicy.addPolicy( new LineOfCreditRank_Z_Check(myMoney, mylineOfCreditRank) );
         // 相手先担当営業の人物チェック(※その⑴：ブラックリストチェック)
-        myPolicy.addPolicy( new BlackListPersonRank_Check(myBlackListRank, mylineOfCreditRank) );
+        myPolicy.addPolicy( new UnBlackListPerson_Check(myBlackListRank, mylineOfCreditRank) );
+        // 相手先担当営業の人物チェック(※その⑴：ブラックリストチェック)
+        myPolicy.addPolicy( new ExceptionPersonList_Check(myExceptionListRank, mylineOfCreditRank) );
 
         // チェック処理の連続実行
         ApprovalCheckResultsChain myCheckResultsChain = myPolicy.execute();
