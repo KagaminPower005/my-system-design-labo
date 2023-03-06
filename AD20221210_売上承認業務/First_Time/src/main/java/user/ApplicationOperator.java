@@ -9,9 +9,9 @@ public class ApplicationOperator {
 
     public static void main(String[] args){
         // 端末でパラメータを入力
-        SalesAmount myMoney = new SalesAmount(1000000);
-        LineOfCreditRank mylineOfCreditRank = LineOfCreditRank.A;
-        BlackListPersonRank myBlackListRank = BlackListPersonRank.N;
+        SalesAmount myMoney = new SalesAmount(490000);
+        LineOfCreditRank mylineOfCreditRank = LineOfCreditRank.D;
+        BlackListPersonRank myBlackListRank = BlackListPersonRank.S;
 
         // サービスが起動
         SalesApprovalService myService

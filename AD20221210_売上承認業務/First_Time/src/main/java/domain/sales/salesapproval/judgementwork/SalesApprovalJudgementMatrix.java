@@ -23,7 +23,7 @@ public class SalesApprovalJudgementMatrix {
         JudgementMatrix.put("OK△OK△--△--△--△OK△--△OK", SalesApproval.OK); //与信枠ランクCのチェック
         JudgementMatrix.put("OK△OK△--△--△--△--△OK△OK", SalesApproval.OK); //与信枠ランクZのチェック
         JudgementMatrix.put("OK△OK△--△--△--△--△--△NG", SalesApproval.NG); //ブラックリストランクのNGチェック
-        JudgementMatrix.put("OK△OK△--△--△--△--△--△--", SalesApproval.NG); //与信枠ランクすべて非該当
+        JudgementMatrix.put("OK△OK△--△--△--△--△--△--", SalesApproval.UNKNOWN); //下限上限金額以外すべて非該当
 
         return JudgementMatrix;
     }
