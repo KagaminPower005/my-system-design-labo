@@ -26,13 +26,12 @@ public class SalesApprovalJudgementMatrix {
         JudgementMatrix.put("OK△OK△--△--△NG△--△--△--△--", SalesApproval.NG); //与信枠ランクBのNGチェック
         JudgementMatrix.put("OK△OK△--△--△--△NG△--△--△--", SalesApproval.NG); //与信枠ランクCのNGチェック
         JudgementMatrix.put("OK△OK△--△--△--△--△NG△--△--", SalesApproval.NG); //与信枠ランクZのNGチェック
-        JudgementMatrix.put("OK△OK△--△--△--△--△--△NG△NG", SalesApproval.NG); //ブラックリストランクのNGチェック
+        JudgementMatrix.put("OK△OK△--△--△--△--△--△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
         JudgementMatrix.put("OK△OK△OK△--△--△--△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
         JudgementMatrix.put("OK△OK△--△OK△--△--△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
         JudgementMatrix.put("OK△OK△--△--△OK△--△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
         JudgementMatrix.put("OK△OK△--△--△--△OK△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
         JudgementMatrix.put("OK△OK△--△--△--△--△OK△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
-        JudgementMatrix.put("OK△OK△--△--△--△--△--△--△--", SalesApproval.UNKNOWN); //下限上限金額以外すべて非該当
 
         return JudgementMatrix;
     }

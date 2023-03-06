@@ -13,7 +13,7 @@ public class ApplicationOperator {
         SalesAmount myMoney = new SalesAmount(290000);
         LineOfCreditRank mylineOfCreditRank = LineOfCreditRank.B;
         BlackListPersonRank myBlackListRank = BlackListPersonRank.S;
-        ExceptionPersonList myExceptionListRank =  ExceptionPersonList.FALSE;
+        ExceptionPersonList myExceptionListRank =  ExceptionPersonList.UNKOWN;
 
         // サービスが起動
         SalesApprovalService myService
