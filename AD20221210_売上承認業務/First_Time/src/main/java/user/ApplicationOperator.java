@@ -26,10 +26,18 @@ public class ApplicationOperator {
                 );
 
         // 結果をコンソールに出力
-        System.out.println( "売上金額   :" + String.format("%,d",myMoney.value().intValue())  + "円" );
-        System.out.println( "与信枠ランク:" + myCreditRank.name() );
-        System.out.println( "ブラックリスト者ランク:" + myBlackListPersonRank.name() );
-        System.out.println( "例外者リスト:" + myExceptionPersonList.name() );
+        System.out.println( "売上金額   :"
+                + String.format("%,d",myMoney.value().intValue()) + "円" );
+
+        System.out.println( "与信枠ランク:"
+                + myCreditRank.name() );
+
+        System.out.println( "ブラックリスト者ランク:"
+                + myBlackListPersonRank.name() );
+
+        System.out.println( "例外者リスト:"
+                + myExceptionPersonList.name() );
+
         System.out.println( myService.run().myMessage() );
     }
 }

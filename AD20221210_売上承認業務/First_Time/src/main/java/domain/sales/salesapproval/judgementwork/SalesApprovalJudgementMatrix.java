@@ -12,7 +12,7 @@ public class SalesApprovalJudgementMatrix {
     final Map<String, SalesApproval> make() {
 
         //【!!ご注意!!】["--△--△--△--△--△--"]←なんでもアリになって他の仕様に影響を及ぼします。
-        //            同様に、あいまいを含めキーが重複する場合挙動がおかしくなります。
+        //            同様に、あいまいを含めキーの値が重複する場合挙動がおかしくなります。
         //売上承認のポリシーパターン結果の組み合わせをキーに判定するぉ♪
         //※『SalesApproval』は後から追記可能な『Enum』
         JudgementMatrix.put("NG△--△--△--△--△--△--△--△--", SalesApproval.NG); //取引下限売上金額のNGチェック

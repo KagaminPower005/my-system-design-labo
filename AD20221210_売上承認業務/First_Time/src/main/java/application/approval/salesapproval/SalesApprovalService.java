@@ -14,9 +14,7 @@ public class SalesApprovalService {
     private final SalesAmount myMoney;
     private final LineOfCreditRank myCreditRank;
     private final BlackListPersonRank myBlackListPersonRank;
-
     private final ExceptionPerson myExceptionPersonList;
-
 
     public SalesApprovalService(
             final SalesAmount myMoney

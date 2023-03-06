@@ -18,7 +18,7 @@ public record UnBlackListPerson_Check(BlackListPersonRank BlackRank, LineOfCredi
         // 上記以外は意外はブラックリストランクがA以上であればすべてNG
         if(this.BlackRank == BlackListPersonRank.S){ return CheckResult.NG; }
         if(this.BlackRank == BlackListPersonRank.A){ return CheckResult.NG; }
-        if(this.CreditRank != null){ return CheckResult.OK; }
+        if(this.CreditRank != null)                { return CheckResult.OK; }
 
         return CheckResult.UNKNOWN;
     }
