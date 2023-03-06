@@ -15,8 +15,8 @@ public class SalesApprovalJudgementMatrix {
         //            同様に、あいまいを含めキーが重複する場合挙動がおかしくなります。
         //売上承認のポリシーパターン結果の組み合わせをキーに判定するぉ♪
         //※『SalesApproval』は後から追記可能な『Enum』
-        JudgementMatrix.put("NG△--△--△--△--△--△--△--△--", SalesApproval.NG); //取引下限売上金額チェック
-        JudgementMatrix.put("OK△NG△--△--△--△--△--△--△--", SalesApproval.NG); //取引上限売上金額チェック
+        JudgementMatrix.put("NG△--△--△--△--△--△--△--△--", SalesApproval.NG); //取引下限売上金額のNGチェック
+        JudgementMatrix.put("OK△NG△--△--△--△--△--△--△--", SalesApproval.NG); //取引上限売上金額のNGチェック
         JudgementMatrix.put("OK△OK△OK△--△--△--△--△OK△--", SalesApproval.OK); //与信枠ランクSのOKチェック
         JudgementMatrix.put("OK△OK△--△OK△--△--△--△OK△--", SalesApproval.OK); //与信枠ランクAのOKチェック
         JudgementMatrix.put("OK△OK△--△--△OK△--△--△OK△--", SalesApproval.OK); //与信枠ランクBのOKチェック
@@ -27,7 +27,11 @@ public class SalesApprovalJudgementMatrix {
         JudgementMatrix.put("OK△OK△--△--△NG△--△--△--△--", SalesApproval.NG); //与信枠ランクBのNGチェック
         JudgementMatrix.put("OK△OK△--△--△--△NG△--△--△--", SalesApproval.NG); //与信枠ランクCのNGチェック
         JudgementMatrix.put("OK△OK△--△--△--△--△NG△--△--", SalesApproval.NG); //与信枠ランクZのNGチェック
-        JudgementMatrix.put("OK△OK△--△--△--△--△--△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
+        JudgementMatrix.put("OK△OK△OK△--△--△--△--△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
+        JudgementMatrix.put("OK△OK△--△OK△--△--△--△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
+        JudgementMatrix.put("OK△OK△--△--△OK△--△--△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
+        JudgementMatrix.put("OK△OK△--△--△--△OK△--△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
+        JudgementMatrix.put("OK△OK△--△--△--△--△OK△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
         JudgementMatrix.put("OK△OK△OK△--△--△--△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
         JudgementMatrix.put("OK△OK△--△OK△--△--△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
         JudgementMatrix.put("OK△OK△--△--△OK△--△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
