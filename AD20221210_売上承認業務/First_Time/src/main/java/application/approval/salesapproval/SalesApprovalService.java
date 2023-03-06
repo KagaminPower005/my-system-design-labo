@@ -1,5 +1,6 @@
 package application.approval.salesapproval;
 
+import domain.credit.blacklist.BlackListPersonRank;
 import domain.sales.salesapproval.checkwork.*;
 import domain.sales.salesapproval.judgementwork.SalesApproval;
 import domain.sales.items.salesamount.SalesAmount;
@@ -10,11 +11,17 @@ import support.Message;
 public class SalesApprovalService {
 
     private final SalesAmount myMoney;
-    private final LineOfCreditRank myRank;
+    private final LineOfCreditRank mylineOfCreditRank;
+    private final BlackListPersonRank myBlackListRank;
 
-    public SalesApprovalService( final SalesAmount myMoney ,final LineOfCreditRank myRank ){
+
+    public SalesApprovalService(
+            final SalesAmount myMoney
+            , final LineOfCreditRank mylineOfCreditRank
+            , final BlackListPersonRank myBlackListRank){
         this.myMoney = myMoney;
-        this.myRank  = myRank;
+        this.mylineOfCreditRank = mylineOfCreditRank;
+        this.myBlackListRank = myBlackListRank;
     }
 
     public Message run(){
@@ -26,15 +33,17 @@ public class SalesApprovalService {
         //取引上限売上金額チェック
         myPolicy.addPolicy( new MaximumSalesAmountCheck(myMoney) );
         //与信枠ランクSのチェック
-        myPolicy.addPolicy( new LineOfCreditRank_S_Check(myRank) );
+        myPolicy.addPolicy( new LineOfCreditRank_S_Check(mylineOfCreditRank) );
         //与信枠ランクAのチェック
-        myPolicy.addPolicy( new LineOfCreditRank_A_Check(myMoney,myRank) );
+        myPolicy.addPolicy( new LineOfCreditRank_A_Check(myMoney, mylineOfCreditRank) );
         //与信枠ランクBのチェック
-        myPolicy.addPolicy( new LineOfCreditRank_B_Check(myMoney,myRank) );
+        myPolicy.addPolicy( new LineOfCreditRank_B_Check(myMoney, mylineOfCreditRank) );
         //与信枠ランクCのチェック
-        myPolicy.addPolicy( new LineOfCreditRank_C_Check(myMoney,myRank) );
+        myPolicy.addPolicy( new LineOfCreditRank_C_Check(myMoney, mylineOfCreditRank) );
         //与信枠ランクZのチェック
-        myPolicy.addPolicy( new LineOfCreditRank_Z_Check(myMoney,myRank) );
+        myPolicy.addPolicy( new LineOfCreditRank_Z_Check(myMoney, mylineOfCreditRank) );
+        // 相手先担当営業の人物チェック(※その⑴：ブラックリストチェック)
+        myPolicy.addPolicy( new BlackListPersonRank_Check(myBlackListRank, mylineOfCreditRank) );
 
         // チェック処理の連続実行
         ApprovalCheckResultsChain myCheckResultsChain = myPolicy.execute();
