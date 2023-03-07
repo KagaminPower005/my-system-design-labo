@@ -11,9 +11,9 @@ public class ApplicationOperator {
     public static void main(String[] args){
         // 端末でパラメータを入力
         SalesAmount myMoney = new SalesAmount(90000);
-        LineOfCreditRank myCreditRank = LineOfCreditRank.C;
-        BlackListPersonRank myBlackListPersonRank = BlackListPersonRank.B;
-        ExceptionPerson myExceptionPersonList =  ExceptionPerson.FALSE;
+        LineOfCreditRank myCreditRank = LineOfCreditRank.B;
+        BlackListPersonRank myBlackListPersonRank = BlackListPersonRank.S;
+        ExceptionPerson myExceptionPersonList =  ExceptionPerson.TRUE;
 
         // サービスが起動
         SalesApprovalService myService
