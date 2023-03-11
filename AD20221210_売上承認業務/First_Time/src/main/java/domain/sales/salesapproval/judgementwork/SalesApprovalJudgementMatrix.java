@@ -18,7 +18,7 @@ public class SalesApprovalJudgementMatrix {
         // ------------------------------------------------------------
         //売上承認のポリシーパターン結果の組み合わせをキーに判定するぉ♪
         //※『SalesApproval』は後から追記可能な『Enum』
-        JudgementMatrix.put("NG△--△--△--△--△--△--△--△--", SalesApproval.NG); //取引下限売上金額のNGチェック
+        JudgementMatrix.put("NG△--"                     , SalesApproval.NG); //取引下限売上金額のNGチェック
         JudgementMatrix.put("OK△NG△--△--△--△--△--△--△--", SalesApproval.NG); //取引上限売上金額のNGチェック
         JudgementMatrix.put("OK△OK△OK△--△--△--△--△OK△--", SalesApproval.OK); //与信枠ランクSのOKチェック
         JudgementMatrix.put("OK△OK△--△OK△--△--△--△OK△--", SalesApproval.OK); //与信枠ランクAのOKチェック

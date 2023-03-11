@@ -8,36 +8,65 @@ import domain.sales.items.salesamount.SalesAmount;
 
 public class ApplicationOperator {
 
-    public static void main(String[] args){
+    private static SalesAmount         myMoney;
+    private static LineOfCreditRank    myCreditRank;
+    private static BlackListPersonRank myBlackListPersonRank;
+    private static ExceptionPerson     myExceptionPersonList;
+
+    private static SalesApprovalService myService;
+
+    public static void main(String[] args) {
         // 端末でパラメータを入力
-        SalesAmount myMoney = new SalesAmount(90000);
-        LineOfCreditRank myCreditRank = LineOfCreditRank.B;
-        BlackListPersonRank myBlackListPersonRank = BlackListPersonRank.S;
-        ExceptionPerson myExceptionPersonList =  ExceptionPerson.TRUE;
+        myMoney = new SalesAmount(900000);
+        myCreditRank = LineOfCreditRank.B;
+        myBlackListPersonRank = BlackListPersonRank.S;
+        myExceptionPersonList = ExceptionPerson.TRUE;
 
-        // サービスが起動
-        SalesApprovalService myService
-                = new SalesApprovalService
-                (
-                        myMoney
-                        ,myCreditRank
-                        ,myBlackListPersonRank
-                        ,myExceptionPersonList
-                );
+        run();
+        sOut();
 
-        // 結果をコンソールに出力
-        System.out.println( "売上金額   :"
-                + String.format("%,d",myMoney.value().intValue()) + "円" );
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
 
-        System.out.println( "与信枠ランク:"
-                + myCreditRank.name() );
+        myMoney = new SalesAmount(100);
+        myCreditRank = LineOfCreditRank.B;
+        myBlackListPersonRank = BlackListPersonRank.S;
+        myExceptionPersonList = ExceptionPerson.TRUE;
 
-        System.out.println( "ブラックリスト者ランク:"
-                + myBlackListPersonRank.name() );
+        run();
+        sOut();
 
-        System.out.println( "例外者リスト:"
-                + myExceptionPersonList.name() );
 
-        System.out.println( myService.run().myMessage() );
     }
+        private static void run(){
+            // サービスが起動
+            myService
+                    = new SalesApprovalService
+                    (
+                            myMoney
+                            ,myCreditRank
+                            ,myBlackListPersonRank
+                            ,myExceptionPersonList
+                    );
+
+        }
+
+        private static void sOut(){
+
+            // 結果をコンソールに出力
+            System.out.println( "売上金額   :"
+                    + String.format("%,d",myMoney.value().intValue()) + "円" );
+
+            System.out.println( "与信枠ランク:"
+                    + myCreditRank.name() );
+
+            System.out.println( "ブラックリスト者ランク:"
+                    + myBlackListPersonRank.name() );
+
+            System.out.println( "例外者リスト:"
+                    + myExceptionPersonList.name() );
+
+            System.out.println( myService.run().myMessage() );
+        }
 }
