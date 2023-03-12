@@ -16,8 +16,11 @@ public class ApplicationOperator {
     private static SalesApprovalService myService;
 
     public static void main(String[] args) {
-        // 端末でパラメータを入力
+        // ～端末でパラメータを入力～
+        System.out.println( "B社／ハザマ クロオさん:タラバガニ一式×６セット" );
         myMoney = new SalesAmount(900000);
+
+        // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.B;
         myBlackListPersonRank = BlackListPersonRank.S;
         myExceptionPersonList = ExceptionPerson.TRUE;
@@ -29,9 +32,13 @@ public class ApplicationOperator {
         System.out.println("------------------------------------------------------------");
         System.out.println("------------------------------------------------------------");
 
+        // ～端末でパラメータを入力～
+        System.out.println( "A社／モリヤマ メーテルさん:ビックリマンチョコ×２個" );
         myMoney = new SalesAmount(100);
+
+        // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.B;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.N;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
