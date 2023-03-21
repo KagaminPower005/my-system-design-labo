@@ -21,7 +21,7 @@ public class ApplicationOperator {
         myMoney = new SalesAmount(900000);
 
         // ～DB呼び出し～データ取得～
-        myCreditRank = LineOfCreditRank.B;
+        myCreditRank = LineOfCreditRank.Z;
         myBlackListPersonRank = BlackListPersonRank.S;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
