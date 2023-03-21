@@ -3,7 +3,6 @@ package domain.sales.salesapproval.judgementwork;
 import domain.sales.salesapproval.checkwork.ApprovalCheckResultsChain;
 import support.MapStringKeySearch;
 import java.util.Map;
-import java.util.SortedMap;
 
 public class SalesApprovalJudgement {
 
@@ -21,10 +20,12 @@ public class SalesApprovalJudgement {
         Map myMap                  = new SalesApprovalJudgementMatrix().make();
         String myMapKey            = this.checkResultsChain.toString();
         Character mySingleLikeChar = SalesApprovalJudgementMatrix.mySingleWildChar();
+        Integer myStartPosition    = SalesApprovalJudgementMatrix.myStartPosition();
 
         SalesApproval mySalesApproval
                 = (SalesApproval)
                     new MapStringKeySearch(myMap)
+                            .startPosition(myStartPosition)
                             .likeGet(myMapKey,mySingleLikeChar);
 
         //すべてアンマッチの場合は"売上承認.わからない"を設定

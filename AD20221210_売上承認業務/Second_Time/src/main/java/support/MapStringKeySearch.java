@@ -4,10 +4,19 @@ import java.util.Map;
 
 public class MapStringKeySearch {
 
-    Map<String,Object> targetMap;
+    private final Map<String,Object> targetMap;
+    private String myStartPosition;
 
     public MapStringKeySearch(Map<String,Object> targetMap){
         this.targetMap = targetMap;
+    }
+
+    public MapStringKeySearch startPosition(Integer myStartPosition){
+        this.myStartPosition = "^";
+        for(int i = 1; myStartPosition > i ; i++){
+            this.myStartPosition += ".";
+        }
+        return this;
     }
 
     public Object likeGet(String key,Character LikeChar) {
@@ -22,7 +31,7 @@ public class MapStringKeySearch {
 
                 final String findKey = LikeKey
                                     .replace(LikeString, ".*")
-                                    .replaceFirst("^....","");
+                                    .replaceFirst(this.myStartPosition,"");
 
                 if (key.matches(findKey)) { return targetMap.get(LikeKey); }
             }
