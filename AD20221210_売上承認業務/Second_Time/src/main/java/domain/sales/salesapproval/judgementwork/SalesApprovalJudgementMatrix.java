@@ -38,7 +38,6 @@ public class SalesApprovalJudgementMatrix {
 
     public static Character mySingleWildChar(){ return '-'; }
     public static Character mySeparatorChar(){ return '△'; }
-
     public static Integer myStartPosition(){ return 5; }
 
 }
