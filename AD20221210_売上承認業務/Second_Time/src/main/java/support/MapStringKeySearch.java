@@ -22,7 +22,7 @@ public class MapStringKeySearch {
     public Object likeGet(String key,Character LikeChar) {
         final String LikeString = LikeChar.toString();
 
-        for (String LikeKey : this.targetMap.keySet()) {
+        for (String LikeKey : this.targetMap.keySet().stream().sorted().toList()) {
             //あいまいチェック♡
             if (LikeKey.contains(LikeString)) {
                 //ここであいまい検索するぉ♡♡
