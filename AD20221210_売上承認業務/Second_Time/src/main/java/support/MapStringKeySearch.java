@@ -12,10 +12,7 @@ public class MapStringKeySearch {
     }
 
     public MapStringKeySearch startPosition(Integer myStartPosition){
-        this.myStartPosition = "^";
-        for(int i = 1; myStartPosition > i ; i++){
-            this.myStartPosition += ".";
-        }
+        this.myStartPosition = "^" + ".".repeat(myStartPosition -1);
         return this;
     }
 
