@@ -23,7 +23,7 @@ public class ApplicationOperator {
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.D;
         myBlackListPersonRank = BlackListPersonRank.S;
-        myExceptionPersonList = ExceptionPerson.UNKNOWN;
+        myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
         sOut();
