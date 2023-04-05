@@ -16,7 +16,6 @@ public record ExceptionPersonList_Check(ExceptionPerson ExceptionRank, LineOfCre
         if(this.ExceptionRank == ExceptionPerson.FALSE)  { return CheckResult.NG; }
 
         // (※念のため、例外リストランクがUNKNOWNであればUNKNOWNとしておく。)
-        if(this.ExceptionRank == ExceptionPerson.UNKNOWN){ return CheckResult.UNKNOWN; }
 
         return CheckResult.UNKNOWN;
     }
