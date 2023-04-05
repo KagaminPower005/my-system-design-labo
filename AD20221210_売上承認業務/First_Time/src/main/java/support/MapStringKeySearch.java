@@ -4,9 +4,9 @@ import java.util.Map;
 
 public class MapStringKeySearch {
 
-    Map<String,Object> targetMap;
+    private final Map<String,?> targetMap;
 
-    public MapStringKeySearch(Map<String,Object> targetMap){
+    public MapStringKeySearch(Map<String,?> targetMap){
         this.targetMap = targetMap;
     }
 

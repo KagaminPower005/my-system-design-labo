@@ -17,10 +17,10 @@ public class SalesApprovalJudgement {
     //※『SalesApproval』は『Enum』による『判定結果値』
     public final SalesApproval judge() {
         // パラメータの準備
-        Map myMap                  = new SalesApprovalJudgementMatrix().make();
-        String myMapKey            = this.checkResultsChain.toString();
-        Character mySingleLikeChar = SalesApprovalJudgementMatrix.mySingleWildChar();
-        Integer myStartPosition    = SalesApprovalJudgementMatrix.myStartPosition();
+        Map<String, SalesApproval> myMap = new SalesApprovalJudgementMatrix().make();
+        String myMapKey                  = this.checkResultsChain.toString();
+        Character mySingleLikeChar       = SalesApprovalJudgementMatrix.mySingleWildChar();
+        Integer myStartPosition          = SalesApprovalJudgementMatrix.myStartPosition();
 
         SalesApproval mySalesApproval
                 = (SalesApproval)

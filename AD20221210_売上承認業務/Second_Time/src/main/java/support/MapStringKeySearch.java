@@ -4,10 +4,10 @@ import java.util.Map;
 
 public class MapStringKeySearch {
 
-    private final Map<String,Object> targetMap;
+    private final Map<String,?> targetMap;
     private String myStartPosition;
 
-    public MapStringKeySearch(Map<String,Object> targetMap){
+    public MapStringKeySearch(Map<String,?> targetMap){
         this.targetMap = targetMap;
     }
 
