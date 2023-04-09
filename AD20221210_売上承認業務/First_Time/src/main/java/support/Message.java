@@ -14,7 +14,7 @@ public record Message(String myMessage) {
         return myNotMatch.isNotMatch();
     }
 
-    public String value(){
+    public String myMessage(){
         // 『ドメイン固有の値』のチェック
         if(this.isNotMatch()){
             throw new RuntimeException(
