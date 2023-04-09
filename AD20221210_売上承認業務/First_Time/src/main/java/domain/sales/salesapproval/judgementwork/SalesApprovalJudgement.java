@@ -3,6 +3,7 @@ package domain.sales.salesapproval.judgementwork;
 import domain.sales.salesapproval.checkwork.ApprovalCheckResultsChain;
 import support.MapStringKeySearch;
 import java.util.Map;
+import java.util.Objects;
 
 public class SalesApprovalJudgement {
 
@@ -27,7 +28,6 @@ public class SalesApprovalJudgement {
                             .likeGet(myMapKey,mySingleLikeChar);
 
         //すべてアンマッチの場合は"売上承認.わからない"を設定
-        if( mySalesApproval == null ){ return SalesApproval.UNKNOWN; }
-        else                         { return mySalesApproval; }
+        return Objects.requireNonNullElse(mySalesApproval, SalesApproval.UNKNOWN);
     }
 }
