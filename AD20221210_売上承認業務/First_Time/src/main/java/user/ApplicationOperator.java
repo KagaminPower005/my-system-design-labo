@@ -21,7 +21,87 @@ public class ApplicationOperator {
         myMoney = new SalesAmount(900000);
 
         // ～DB呼び出し～データ取得～
-        myCreditRank = LineOfCreditRank.S;
+        myCreditRank = LineOfCreditRank.valueOf("S");
+        myBlackListPersonRank = BlackListPersonRank.valueOf("S");
+        myExceptionPersonList = ExceptionPerson.valueOf("TRUE");
+
+        run();
+        sOut();
+
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+
+        // ～端末でパラメータを入力～
+        System.out.println( "B社／ハザマ クロオさん:タラバガニ一式×６セット" );
+        myMoney = new SalesAmount(900000);
+
+        // ～DB呼び出し～データ取得～
+        myCreditRank = LineOfCreditRank.A;
+        myBlackListPersonRank = BlackListPersonRank.S;
+        myExceptionPersonList = ExceptionPerson.TRUE;
+
+        run();
+        sOut();
+
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+
+        // ～端末でパラメータを入力～
+        System.out.println( "B社／ハザマ クロオさん:タラバガニ一式×６セット" );
+        myMoney = new SalesAmount(900000);
+
+        // ～DB呼び出し～データ取得～
+        myCreditRank = LineOfCreditRank.B;
+        myBlackListPersonRank = BlackListPersonRank.S;
+        myExceptionPersonList = ExceptionPerson.TRUE;
+
+        run();
+        sOut();
+
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+
+        // ～端末でパラメータを入力～
+        System.out.println( "B社／ハザマ クロオさん:タラバガニ一式×６セット" );
+        myMoney = new SalesAmount(900000);
+
+        // ～DB呼び出し～データ取得～
+        myCreditRank = LineOfCreditRank.C;
+        myBlackListPersonRank = BlackListPersonRank.S;
+        myExceptionPersonList = ExceptionPerson.TRUE;
+
+        run();
+        sOut();
+
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+
+        // ～端末でパラメータを入力～
+        System.out.println( "B社／ハザマ クロオさん:タラバガニ一式×６セット" );
+        myMoney = new SalesAmount(900000);
+
+        // ～DB呼び出し～データ取得～
+        myCreditRank = LineOfCreditRank.D;
+        myBlackListPersonRank = BlackListPersonRank.S;
+        myExceptionPersonList = ExceptionPerson.TRUE;
+
+        run();
+        sOut();
+
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------");
+
+        // ～端末でパラメータを入力～
+        System.out.println( "B社／ハザマ クロオさん:タラバガニ一式×６セット" );
+        myMoney = new SalesAmount(900000);
+
+        // ～DB呼び出し～データ取得～
+        myCreditRank = LineOfCreditRank.Z;
         myBlackListPersonRank = BlackListPersonRank.S;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
@@ -37,7 +117,7 @@ public class ApplicationOperator {
         myMoney = new SalesAmount(100);
 
         // ～DB呼び出し～データ取得～
-        myCreditRank = LineOfCreditRank.B;
+        myCreditRank = LineOfCreditRank.S;
         myBlackListPersonRank = BlackListPersonRank.N;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
