@@ -38,7 +38,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.A;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.D;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -54,7 +54,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.B;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.A;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -70,7 +70,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.C;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.B;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -86,7 +86,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.D;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.A;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -102,7 +102,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.Z;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.C;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();

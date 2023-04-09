@@ -38,7 +38,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.A;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.D;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -54,7 +54,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.B;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.A;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -70,7 +70,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.C;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.B;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -86,7 +86,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.D;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.A;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -102,7 +102,7 @@ public class ApplicationOperator {
 
         // ～DB呼び出し～データ取得～
         myCreditRank = LineOfCreditRank.Z;
-        myBlackListPersonRank = BlackListPersonRank.S;
+        myBlackListPersonRank = BlackListPersonRank.C;
         myExceptionPersonList = ExceptionPerson.TRUE;
 
         run();
@@ -126,34 +126,34 @@ public class ApplicationOperator {
 
 
     }
-        private static void run(){
-            // サービスが起動
-            myService
-                    = new SalesApprovalService
-                    (
-                            myMoney
-                            ,myCreditRank
-                            ,myBlackListPersonRank
-                            ,myExceptionPersonList
-                    );
+    private static void run(){
+        // サービスが起動
+        myService
+                = new SalesApprovalService
+                (
+                        myMoney
+                        ,myCreditRank
+                        ,myBlackListPersonRank
+                        ,myExceptionPersonList
+                );
 
-        }
+    }
 
-        private static void sOut(){
+    private static void sOut(){
 
-            // 結果をコンソールに出力
-            System.out.println( "売上金額   :"
-                    + String.format("%,d",myMoney.value().intValue()) + "円" );
+        // 結果をコンソールに出力
+        System.out.println( "売上金額   :"
+                + String.format("%,d",myMoney.value().intValue()) + "円" );
 
-            System.out.println( "与信枠ランク:"
-                    + myCreditRank.name() );
+        System.out.println( "与信枠ランク:"
+                + myCreditRank.name() );
 
-            System.out.println( "ブラックリスト者ランク:"
-                    + myBlackListPersonRank.name() );
+        System.out.println( "ブラックリスト者ランク:"
+                + myBlackListPersonRank.name() );
 
-            System.out.println( "例外者リスト:"
-                    + myExceptionPersonList.name() );
+        System.out.println( "例外者リスト:"
+                + myExceptionPersonList.name() );
 
-            System.out.println( myService.run().myMessage() );
-        }
+        System.out.println( myService.run().myMessage() );
+    }
 }
