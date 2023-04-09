@@ -15,17 +15,6 @@ public class PolicySalesApprovalChecksInvoker {
                 (policyStack.size() + "個目のポリシーを登録しました。");
     }
 
-    // 直近のポリシーを削除する
-    public void undoPolicy() {
-        if(policyStack.empty()) {
-            System.out.println("削除するポリシーがありません。");
-        } else {
-            policyStack.pop();
-            System.out.println
-                    ((policyStack.size()+1) + "個目のポリシーを削除しました。");
-        }
-    }
-
     // ポリシーを順番に実行する
     public ApprovalCheckResultsChain execute() {
         System.out.println
