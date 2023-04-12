@@ -35,7 +35,7 @@ public class SalesApprovalJudgementMatrix {
         JudgementMatrix.put("OK△OK△--△--△OK△--△--△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
         JudgementMatrix.put("OK△OK△--△--△--△OK△--△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
         JudgementMatrix.put("OK△OK△--△--△--△--△OK△NG△NG", SalesApproval.NG); //非ブラックリストのNGチェック
-        JudgementMatrix.put("OK△OK△OK△--△--△--△--△NG△OK", SalesApproval.GM_APPROVAL); //例外者リストのGMチェック
+        JudgementMatrix.put("OK△OK△OK△--△--△--△--△NG△OK", SalesApproval.GM_CHECK); //例外者リストのGMチェック
         JudgementMatrix.put("OK△OK△--△OK△--△--△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
         JudgementMatrix.put("OK△OK△--△--△OK△--△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
         JudgementMatrix.put("OK△OK△--△--△--△OK△--△NG△OK", SalesApproval.OK); //例外者リストのOKチェック
