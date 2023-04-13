@@ -6,10 +6,11 @@ import infrastructure.CarDBBean02;
 import infrastructure.CarDBBean03;
 
 import java.util.ArrayList;
+import java.util.stream.IntStream;
 
 public class User01 {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
 
         CarDBBean myBean = new CarDBBean();
 
@@ -27,6 +28,20 @@ public class User01 {
         data = myBean02.getData();
 
         System.out.println(data.size());
+
+        IntStream.range(0, data.size()).forEach(i -> {
+            System.out.println(data.get(i).id().value());
+            System.out.println(data.get(i).name().value());
+        });
+
+        System.out.println(data.get(2).id().id());
+        System.out.println(data.get(2).name().value());
+
+        System.out.println(data.get(0).id().value());
+        System.out.println(data.get(0).name().value());
+
+        System.out.println(data.get(1).id().value());
+        System.out.println(data.get(1).name().value());
 
         System.out.println("------------------------------------------------------------");
 

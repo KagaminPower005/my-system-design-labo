@@ -2,8 +2,6 @@ package domain;
 
 import support.NotMatch;
 
-import java.sql.ResultSet;
-
 public record id(int id) {
 
     //※↓↓『ドメイン固有の値』のチェック↓↓
