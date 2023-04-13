@@ -1,15 +1,20 @@
 package infrastructure;
 
-import java.util.*;
-import java.io.*;
-import java.sql.*;
+import domain.car_table;
+import domain.id;
+import domain.name;
 
-public class CarDBBean implements Serializable
+import java.io.Serializable;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class CarDBBean02 implements Serializable
 {
     private Vector<String> colname;
-    private Vector<Vector> data;
+    private ArrayList<car_table> data;
 
-    public CarDBBean()
+    public CarDBBean02()
     {
         try{
             //接続の準備
@@ -40,13 +45,14 @@ public class CarDBBean implements Serializable
             }
 
             //行の取得
-            data = new Vector<Vector>();
+            data = new ArrayList<>();
             while(rs.next()){
-                Vector<String> rowdata = new Vector<String>();
-                for(int i=1; i<=cnum; i++){
-                    rowdata.addElement(rs.getObject(i).toString());
-                }
-                data.addElement(rowdata);
+
+                id myId = new id(rs.getInt(id.class.getSimpleName()));
+                name myName = new name(rs.getString(name.class.getSimpleName()));
+                car_table myCar_table = new car_table(myId,myName);
+
+                data.add(myCar_table);
             }
 
             //接続のクローズ
@@ -58,7 +64,7 @@ public class CarDBBean implements Serializable
             e.printStackTrace();
         }
     }
-    public Vector getData()
+    public ArrayList<car_table> getData()
     {
         return data;
     }
