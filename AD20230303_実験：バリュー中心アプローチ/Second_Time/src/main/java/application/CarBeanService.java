@@ -33,7 +33,7 @@ public class CarBeanService {
             System.out.println(data.get(i).name().value());
         });
 
-        System.out.println(data.get(2).id().id());
+        System.out.println(data.get(2).id().value());
         System.out.println(data.get(2).name().value());
 
         System.out.println(data.get(0).id().value());
