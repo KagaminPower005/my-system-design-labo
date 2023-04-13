@@ -1,8 +1,8 @@
 package infrastructure;
 
-import domain.car_table;
-import domain.id;
-import domain.name;
+import domain.car_table.car_table_row;
+import domain.car_table.id;
+import domain.car_table.name;
 
 import java.io.Serializable;
 import java.sql.*;
@@ -12,7 +12,7 @@ import java.util.Vector;
 public class CarDBBean02 implements Serializable
 {
     private Vector<String> colname;
-    private ArrayList<car_table> data;
+    private ArrayList<car_table_row> data;
 
     public CarDBBean02()
     {
@@ -37,11 +37,11 @@ public class CarDBBean02 implements Serializable
             //列数の取得
             ResultSetMetaData rm = rs.getMetaData();
             int cnum = rm.getColumnCount();
-            colname = new Vector<String>(cnum);
+            colname = new Vector<>(cnum);
 
             //列名の取得
             for(int i=1; i<=cnum; i++){
-                colname.addElement(rm.getColumnName(i).toString());
+                colname.addElement(rm.getColumnName(i));
             }
 
             //行の取得
@@ -50,9 +50,9 @@ public class CarDBBean02 implements Serializable
 
                 id myId = new id(rs.getInt(id.class.getSimpleName()));
                 name myName = new name(rs.getString(name.class.getSimpleName()));
-                car_table myCar_table = new car_table(myId,myName);
+                car_table_row myCar_tableRow = new car_table_row(myId,myName);
 
-                data.add(myCar_table);
+                data.add(myCar_tableRow);
             }
 
             //接続のクローズ
@@ -64,11 +64,11 @@ public class CarDBBean02 implements Serializable
             e.printStackTrace();
         }
     }
-    public ArrayList<car_table> getData()
+    public ArrayList<car_table_row> getData()
     {
         return data;
     }
-    public Vector getColname()
+    public Vector<String> getColname()
     {
         return colname;
     }

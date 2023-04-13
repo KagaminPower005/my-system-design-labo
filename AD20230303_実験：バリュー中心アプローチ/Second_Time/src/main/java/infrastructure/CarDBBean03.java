@@ -1,7 +1,7 @@
 package infrastructure;
 
-import domain.id;
-import domain.name;
+import domain.car_table.id;
+import domain.car_table.name;
 
 import java.io.Serializable;
 import java.sql.*;

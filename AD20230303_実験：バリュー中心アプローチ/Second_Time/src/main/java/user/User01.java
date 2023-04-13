@@ -1,13 +1,12 @@
 package user;
 
-import application.BeanService;
-
+import application.CarBeanService;
 
 public class User01 {
 
     public static void main(String[] args){
 
-        BeanService myBean = new BeanService();
+        CarBeanService myBean = new CarBeanService();
 
         myBean.execute();
 

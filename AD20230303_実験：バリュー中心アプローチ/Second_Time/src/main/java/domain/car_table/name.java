@@ -1,4 +1,4 @@
-package domain;
+package domain.car_table;
 
 import support.NotMatch;
 

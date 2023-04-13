@@ -1,6 +1,6 @@
 package application;
 
-import domain.car_table;
+import domain.car_table.car_table_row;
 import infrastructure.CarDBBean;
 import infrastructure.CarDBBean02;
 import infrastructure.CarDBBean03;
@@ -8,7 +8,7 @@ import infrastructure.CarDBBean03;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 
-public class BeanService {
+public class CarBeanService {
 
     public void execute(){
         CarDBBean myBean = new CarDBBean();
@@ -23,7 +23,7 @@ public class BeanService {
         System.out.println(myBean02.getColname());
         System.out.println(myBean02.getData());
 
-        ArrayList<car_table> data;
+        ArrayList<car_table_row> data;
         data = myBean02.getData();
 
         System.out.println(data.size());
