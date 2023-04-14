@@ -37,8 +37,8 @@ public class CarBeanService {
         System.out.println(data02.size());
 
         IntStream.range(0, data02.size()).forEach(i -> {
-            System.out.println(data02.get(i).id().value());
-            System.out.println(data02.get(i).name().value());
+            System.out.print("[" + data02.get(i).id().value() + ", ");
+            System.out.println(data02.get(i).name().value() + "]");
         });
 
         System.out.println("------------------------------------------------------------");
