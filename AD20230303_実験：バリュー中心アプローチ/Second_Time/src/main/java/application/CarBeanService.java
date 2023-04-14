@@ -31,24 +31,15 @@ public class CarBeanService {
         System.out.println(myBean02.getColname());
         System.out.println(myBean02.getData());
 
-        ArrayList<car_table_row> data;
-        data = myBean02.getData();
+        ArrayList<car_table_row> data02;
+        data02 = myBean02.getData();
 
-        System.out.println(data.size());
+        System.out.println(data02.size());
 
-        IntStream.range(0, data.size()).forEach(i -> {
-            System.out.println(data.get(i).id().value());
-            System.out.println(data.get(i).name().value());
+        IntStream.range(0, data02.size()).forEach(i -> {
+            System.out.println(data02.get(i).id().value());
+            System.out.println(data02.get(i).name().value());
         });
-
-//        System.out.println(data.get(2).id().value());
-//        System.out.println(data.get(2).name().value());
-//
-//        System.out.println(data.get(0).id().value());
-//        System.out.println(data.get(0).name().value());
-//
-//        System.out.println(data.get(1).id().value());
-//        System.out.println(data.get(1).name().value());
 
         System.out.println("------------------------------------------------------------");
 
