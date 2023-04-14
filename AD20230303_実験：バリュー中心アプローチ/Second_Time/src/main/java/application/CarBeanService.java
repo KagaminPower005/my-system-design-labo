@@ -16,6 +16,14 @@ public class CarBeanService {
         System.out.println(myBean.getColname());
         System.out.println(myBean.getData());
 
+        var data01 = myBean.getData();
+
+        System.out.println(data01.size());
+
+        IntStream.range(0, data01.size()).forEach(i ->
+                System.out.println(data01.get(i).toString())
+        );
+
         System.out.println("------------------------------------------------------------");
 
         CarDBBean02 myBean02 = new CarDBBean02();
@@ -33,14 +41,14 @@ public class CarBeanService {
             System.out.println(data.get(i).name().value());
         });
 
-        System.out.println(data.get(2).id().value());
-        System.out.println(data.get(2).name().value());
-
-        System.out.println(data.get(0).id().value());
-        System.out.println(data.get(0).name().value());
-
-        System.out.println(data.get(1).id().value());
-        System.out.println(data.get(1).name().value());
+//        System.out.println(data.get(2).id().value());
+//        System.out.println(data.get(2).name().value());
+//
+//        System.out.println(data.get(0).id().value());
+//        System.out.println(data.get(0).name().value());
+//
+//        System.out.println(data.get(1).id().value());
+//        System.out.println(data.get(1).name().value());
 
         System.out.println("------------------------------------------------------------");
 
@@ -48,5 +56,14 @@ public class CarBeanService {
 
         System.out.println(myBean03.getColname());
         System.out.println(myBean03.getData());
+
+        var data03 = myBean03.getData();
+
+        System.out.println(data03.size());
+
+        IntStream.range(0, data03.size()).forEach(i ->
+                System.out.println(data03.get(i).toString())
+        );
+
     }
 }
