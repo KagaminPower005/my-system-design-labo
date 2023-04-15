@@ -1,20 +1,20 @@
 package infrastructure.car.rdb;
 
-import domain.car.value.car_owner_name_car_name_list.Car_name;
-import domain.car.value.car_owner_name_car_name_list.Car_owner_name;
-import domain.car.value.car_owner_name_car_name_list.Car_owner_name_Car_name_List_Row;
+import domain.car.value.car_owner_name_car_name_list.CarName;
+import domain.car.value.car_owner_name_car_name_list.CarOwnerName;
+import domain.car.value.car_owner_name_car_name_list.CarOwnerName_CarName_List_Row;
 
 import java.io.Serializable;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class CarOwnerName_CarName_ListDBBean02 implements Serializable
+public class CarOwnerName_CarName_List_DBBean02 implements Serializable
 {
     private Vector<String> colname;
-    private ArrayList<Car_owner_name_Car_name_List_Row> data;
+    private ArrayList<CarOwnerName_CarName_List_Row> data;
 
-    public CarOwnerName_CarName_ListDBBean02()
+    public CarOwnerName_CarName_List_DBBean02()
     {
         try{
             //接続の準備
@@ -30,11 +30,11 @@ public class CarOwnerName_CarName_ListDBBean02 implements Serializable
             //問い合わせの準備
             Statement st = cn.createStatement();
             String qry = "SELECT" +
-                    " c.Name As '" + Car_owner_name.class.getSimpleName() + "'" +
-                    " ,a.Name As '" + Car_name.class.getSimpleName() + "'" +
-                    " FROM car a " +
-                    " Join car_owner_car_relation b on a.id = b.car_id" +
-                    " Join car_owner c on c.id = b.car_owner_id";
+                    " c.Name As '" + CarOwnerName.class.getSimpleName() + "'" +
+                    " ,a.Name As '" + CarName.class.getSimpleName() + "'" +
+                    " FROM Car a " +
+                    " Join CarOwner_Car_Relation b on a.Id = b.CarId" +
+                    " Join CarOwner c on c.Id = b.CarOwnerId";
 
             //問い合わせ
             ResultSet rs = st.executeQuery(qry);
@@ -53,12 +53,12 @@ public class CarOwnerName_CarName_ListDBBean02 implements Serializable
             data = new ArrayList<>();
             while(rs.next()){
 
-                Car_owner_name myCar_owner_name
-                        = new Car_owner_name(rs.getString(Car_owner_name.class.getSimpleName()));
-                Car_name myCar_name
-                        = new Car_name(rs.getString(Car_name.class.getSimpleName()));
-                Car_owner_name_Car_name_List_Row myCar_owner_name_Car_name_ListRow
-                        = new Car_owner_name_Car_name_List_Row(myCar_owner_name,myCar_name);
+                CarOwnerName myCar_ownerName
+                        = new CarOwnerName(rs.getString(CarOwnerName.class.getSimpleName()));
+                CarName myCar_name
+                        = new CarName(rs.getString(CarName.class.getSimpleName()));
+                CarOwnerName_CarName_List_Row myCar_owner_name_Car_name_ListRow
+                        = new CarOwnerName_CarName_List_Row(myCar_ownerName,myCar_name);
 
                 data.add(myCar_owner_name_Car_name_ListRow);
             }
@@ -72,7 +72,7 @@ public class CarOwnerName_CarName_ListDBBean02 implements Serializable
             e.printStackTrace();
         }
     }
-    public ArrayList<Car_owner_name_Car_name_List_Row> getData()
+    public ArrayList<CarOwnerName_CarName_List_Row> getData()
     {
         return data;
     }

@@ -4,7 +4,7 @@ import domain.car.value.car.Id;
 import domain.car.value.car.Name;
 
 // @TableRow,@Field,みたいな!?自動生成。
-public record Car_owner_Row(Id id, Name name) {
+public record CarOwner_Row(Id id, Name name) {
 
 
 }
