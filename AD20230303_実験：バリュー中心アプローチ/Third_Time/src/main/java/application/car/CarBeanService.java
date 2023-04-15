@@ -1,6 +1,6 @@
 package application.car;
 
-import domain.car.entity.car.Car_Row;
+import domain.car.value.car.Car_Row;
 import infrastructure.car.rdb.CarDBBean;
 import infrastructure.car.rdb.CarDBBean02;
 import infrastructure.car.rdb.CarDBBean03;

@@ -1,22 +1,22 @@
-package domain.car.entity.car;
+package domain.car.value.car_owner;
 
 import support.NotMatch;
 
-public record Id(int id) {
+public record Name(String name) {
 
     //※↓↓『ドメイン固有の値』のチェック↓↓
-    public static final int MAX_VALUE = 10;
+    public static final int MAX_VALUE = 50;
     public static final int MIN_VALUE = 0;
     //※↑↑『ドメイン固有の値』のチェック↑↑
 
     public Boolean isNotMatch(){
         NotMatch myNotMatch
-                = new NotMatch(MAX_VALUE, MIN_VALUE, this.id);
+                = new NotMatch(MAX_VALUE, MIN_VALUE, this.name.length());
 
         return myNotMatch.isNotMatch();
     }
 
-    public Integer value() {
+    public String value() {
         // 『ドメイン固有の値』のチェック
         if(this.isNotMatch()){
             throw new RuntimeException(
@@ -25,6 +25,7 @@ public record Id(int id) {
             );
         }
 
-        return this.id;
+        return this.name;
     }
+
 }

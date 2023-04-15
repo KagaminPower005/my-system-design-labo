@@ -1,6 +1,6 @@
-package domain.car.entity.car_owner_car_relation;
+package domain.car.value.car_owner_car_relation;
 
-import domain.car.entity.car_owner.Id;
+import domain.car.value.car_owner.Id;
 import support.NotMatch;
 
 public record Car_owner_id(int id) {

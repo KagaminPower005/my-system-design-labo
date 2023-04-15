@@ -1,4 +1,4 @@
-package domain.car.entity.car_owner;
+package domain.car.value.car;
 
 import support.NotMatch;
 

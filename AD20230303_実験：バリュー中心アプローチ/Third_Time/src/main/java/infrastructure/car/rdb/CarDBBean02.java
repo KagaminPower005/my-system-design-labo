@@ -1,8 +1,8 @@
 package infrastructure.car.rdb;
 
-import domain.car.entity.car.Car_Row;
-import domain.car.entity.car.Id;
-import domain.car.entity.car.Name;
+import domain.car.value.car.Car_Row;
+import domain.car.value.car.Id;
+import domain.car.value.car.Name;
 
 import java.io.Serializable;
 import java.util.ArrayList;
