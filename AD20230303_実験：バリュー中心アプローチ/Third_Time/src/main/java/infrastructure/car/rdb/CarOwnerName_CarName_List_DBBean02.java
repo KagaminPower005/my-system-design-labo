@@ -29,7 +29,8 @@ public class CarOwnerName_CarName_List_DBBean02 implements Serializable
 
             //問い合わせの準備
             Statement st = cn.createStatement();
-            String qry = "SELECT" +
+            String qry
+                    = "SELECT" +
                     " c.Name As '" + CarOwnerName.class.getSimpleName() + "'" +
                     " ,a.Name As '" + CarName.class.getSimpleName() + "'" +
                     " FROM Car a " +
@@ -57,8 +58,10 @@ public class CarOwnerName_CarName_List_DBBean02 implements Serializable
                         = new CarOwnerName(rs.getString(CarOwnerName.class.getSimpleName()));
                 CarName myCar_name
                         = new CarName(rs.getString(CarName.class.getSimpleName()));
-                CarOwnerName_CarName_List_Row myCar_owner_name_Car_name_ListRow
-                        = new CarOwnerName_CarName_List_Row(myCar_ownerName,myCar_name);
+
+                CarOwnerName_CarName_List_Row
+                        myCar_owner_name_Car_name_ListRow
+                         = new CarOwnerName_CarName_List_Row(myCar_ownerName,myCar_name);
 
                 data.add(myCar_owner_name_Car_name_ListRow);
             }

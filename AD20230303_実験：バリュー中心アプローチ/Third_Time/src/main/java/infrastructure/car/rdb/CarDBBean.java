@@ -36,7 +36,7 @@ public class CarDBBean implements Serializable
 
             //列名の取得
             for(int i=1; i<=cnum; i++){
-                colname.addElement(rm.getColumnName(i).toString());
+                colname.addElement(rm.getColumnName(i));
             }
 
             //行の取得
