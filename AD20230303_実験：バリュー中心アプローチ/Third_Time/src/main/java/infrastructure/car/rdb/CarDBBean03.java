@@ -1,7 +1,7 @@
 package infrastructure.car.rdb;
 
-import domain.car.entity.car.id;
-import domain.car.entity.car.name;
+import domain.car.entity.car.Id;
+import domain.car.entity.car.Name;
 
 import java.io.Serializable;
 import java.util.Vector;
@@ -47,8 +47,8 @@ public class CarDBBean03 implements Serializable
             while(rs.next()){
                 Vector<String> rowdata = new Vector<String>();
 
-                rowdata.addElement(rs.getObject(id.class.getSimpleName()).toString());
-                rowdata.addElement(rs.getObject(name.class.getSimpleName()).toString());
+                rowdata.addElement(rs.getObject(Id.class.getSimpleName()).toString());
+                rowdata.addElement(rs.getObject(Name.class.getSimpleName()).toString());
 
                 data.addElement(rowdata);
             }

@@ -1,8 +1,8 @@
-package domain.car.entity.car;
+package domain.car.entity.car_owner;
 
 import support.NotMatch;
 
-public record id(int id) {
+public record Id(int id) {
 
     //※↓↓『ドメイン固有の値』のチェック↓↓
     public static final int MAX_VALUE = 10;

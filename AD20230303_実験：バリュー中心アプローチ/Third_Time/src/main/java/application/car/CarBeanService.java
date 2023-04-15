@@ -1,6 +1,6 @@
 package application.car;
 
-import domain.car.entity.car.car_row;
+import domain.car.entity.car.Car_Row;
 import infrastructure.car.rdb.CarDBBean;
 import infrastructure.car.rdb.CarDBBean02;
 import infrastructure.car.rdb.CarDBBean03;
@@ -31,7 +31,7 @@ public class CarBeanService {
         System.out.println(myBean02.getColname());
         System.out.println(myBean02.getData());
 
-        ArrayList<car_row> data02;
+        ArrayList<Car_Row> data02;
         data02 = myBean02.getData();
 
         System.out.println(data02.size());

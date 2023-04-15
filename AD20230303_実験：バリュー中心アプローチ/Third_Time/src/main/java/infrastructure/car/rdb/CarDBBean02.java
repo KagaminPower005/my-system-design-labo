@@ -1,8 +1,8 @@
 package infrastructure.car.rdb;
 
-import domain.car.entity.car.car_row;
-import domain.car.entity.car.id;
-import domain.car.entity.car.name;
+import domain.car.entity.car.Car_Row;
+import domain.car.entity.car.Id;
+import domain.car.entity.car.Name;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.sql.*;
 public class CarDBBean02 implements Serializable
 {
     private Vector<String> colname;
-    private ArrayList<car_row> data;
+    private ArrayList<Car_Row> data;
 
     public CarDBBean02()
     {
@@ -29,7 +29,7 @@ public class CarDBBean02 implements Serializable
 
             //問い合わせの準備
             Statement st = cn.createStatement();
-            String qry = "SELECT * FROM car";
+            String qry = "SELECT * FROM car_owner";
 
             //問い合わせ
             ResultSet rs = st.executeQuery(qry);
@@ -48,9 +48,9 @@ public class CarDBBean02 implements Serializable
             data = new ArrayList<>();
             while(rs.next()){
 
-                id myId = new id(rs.getInt(id.class.getSimpleName()));
-                name myName = new name(rs.getString(name.class.getSimpleName()));
-                car_row myCar_tableRow = new car_row(myId,myName);
+                Id myId = new Id(rs.getInt(Id.class.getSimpleName()));
+                Name myName = new Name(rs.getString(Name.class.getSimpleName()));
+                Car_Row myCar_tableRow = new Car_Row(myId,myName);
 
                 data.add(myCar_tableRow);
             }
@@ -64,7 +64,7 @@ public class CarDBBean02 implements Serializable
             e.printStackTrace();
         }
     }
-    public ArrayList<car_row> getData()
+    public ArrayList<Car_Row> getData()
     {
         return data;
     }
