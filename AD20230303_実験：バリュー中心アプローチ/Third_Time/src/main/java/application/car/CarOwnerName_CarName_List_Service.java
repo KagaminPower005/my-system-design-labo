@@ -14,7 +14,8 @@ public class CarOwnerName_CarName_List_Service {
 
         myList = new StringBuilder("------------------------------------------------------------\n");
 
-        myList.append(myBean02.getCol_name().toString()).append("]\n");
+        myList.append(myBean02.getCol_name().toString())
+                .append("]\n");
 
         myList.append("------------------------------------------------------------\n");
 
@@ -32,7 +33,8 @@ public class CarOwnerName_CarName_List_Service {
 
         myList.append("------------------------------------------------------------\n");
 
-        myList.append(data02.size()).append("\n");
+        myList.append(data02.size())
+                .append("\n");
 
         myList.append("------------------------------------------------------------\n");
 
