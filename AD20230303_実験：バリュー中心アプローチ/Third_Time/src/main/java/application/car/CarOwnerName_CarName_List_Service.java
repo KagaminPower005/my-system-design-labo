@@ -11,6 +11,7 @@ public class CarOwnerName_CarName_List_Service {
         CarOwnerName_CarName_List_DBBean02 myBean02 = new CarOwnerName_CarName_List_DBBean02();
 
         System.out.println("------------------------------------------------------------");
+
         System.out.println(myBean02.getColname());
 
         System.out.println("------------------------------------------------------------");
@@ -24,6 +25,7 @@ public class CarOwnerName_CarName_List_Service {
         });
 
         System.out.println("------------------------------------------------------------");
+
         System.out.println(data02.size());
 
         System.out.println("------------------------------------------------------------");
