@@ -12,7 +12,7 @@ public class CarOwnerName_CarName_List_Service {
 
         System.out.println("------------------------------------------------------------");
 
-        System.out.println(myBean02.getColname());
+        System.out.println(myBean02.getCol_name());
 
         System.out.println("------------------------------------------------------------");
 

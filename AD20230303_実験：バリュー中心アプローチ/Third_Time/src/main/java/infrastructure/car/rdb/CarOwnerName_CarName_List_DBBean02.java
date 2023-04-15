@@ -11,7 +11,7 @@ import java.util.Vector;
 
 public class CarOwnerName_CarName_List_DBBean02 implements Serializable
 {
-    private Vector<String> colname;
+    private Vector<String> col_name;
     private ArrayList<CarOwnerName_CarName_List_Row> data;
 
     public CarOwnerName_CarName_List_DBBean02()
@@ -19,7 +19,7 @@ public class CarOwnerName_CarName_List_DBBean02 implements Serializable
         try{
             //接続の準備
             String drv = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql:///carownerdb";
+            String url = "jdbc:mysql:///CarOwnerDb";
             String usr = "root";
             String pw = "admin";
 
@@ -42,12 +42,12 @@ public class CarOwnerName_CarName_List_DBBean02 implements Serializable
 
             //列数の取得
             ResultSetMetaData rm = rs.getMetaData();
-            int cnum = rm.getColumnCount();
-            colname = new Vector<>(cnum);
+            int col_num = rm.getColumnCount();
+            col_name = new Vector<>(col_num);
 
             //列名の取得
-            for(int i=1; i<=cnum; i++){
-                colname.addElement(rm.getColumnName(i));
+            for(int i=1; i<=col_num; i++){
+                col_name.addElement(rm.getColumnName(i));
             }
 
             //行の取得
@@ -79,8 +79,8 @@ public class CarOwnerName_CarName_List_DBBean02 implements Serializable
     {
         return data;
     }
-    public Vector<String> getColname()
+    public Vector<String> getCol_name()
     {
-        return colname;
+        return col_name;
     }
 }
