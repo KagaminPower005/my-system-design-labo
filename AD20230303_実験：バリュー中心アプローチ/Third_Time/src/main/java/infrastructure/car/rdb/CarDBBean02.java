@@ -29,7 +29,7 @@ public class CarDBBean02 implements Serializable
 
             //問い合わせの準備
             Statement st = cn.createStatement();
-            String qry = "SELECT * FROM car_owner";
+            String qry = "SELECT * FROM car";
 
             //問い合わせ
             ResultSet rs = st.executeQuery(qry);
