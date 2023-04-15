@@ -9,15 +9,15 @@ import java.sql.*;
 
 public class CarDBBean03 implements Serializable
 {
-    private Vector<String> colname;
-    private Vector<Vector> data;
+    private Vector<String> col_name;
+    private Vector<Vector<String>> data;
 
     public CarDBBean03()
     {
         try{
             //接続の準備
             String drv = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql:///carownerdb";
+            String url = "jdbc:mysql:///CarOwnerDb";
             String usr = "root";
             String pw = "admin";
 
@@ -34,23 +34,23 @@ public class CarDBBean03 implements Serializable
 
             //列数の取得
             ResultSetMetaData rm = rs.getMetaData();
-            int cnum = rm.getColumnCount();
-            colname = new Vector<String>(cnum);
+            int col_num = rm.getColumnCount();
+            col_name = new Vector<>(col_num);
 
             //列名の取得
-            for(int i=1; i<=cnum; i++){
-                colname.addElement(rm.getColumnName(i).toString());
+            for(int i=1; i<=col_num; i++){
+                col_name.addElement(rm.getColumnName(i));
             }
 
             //行の取得
-            data = new Vector<Vector>();
+            data = new Vector<>();
             while(rs.next()){
-                Vector<String> rowdata = new Vector<String>();
+                Vector<String> row_data = new Vector<>();
 
-                rowdata.addElement(rs.getObject(Id.class.getSimpleName()).toString());
-                rowdata.addElement(rs.getObject(Name.class.getSimpleName()).toString());
+                row_data.addElement(rs.getObject(Id.class.getSimpleName()).toString());
+                row_data.addElement(rs.getObject(Name.class.getSimpleName()).toString());
 
-                data.addElement(rowdata);
+                data.addElement(row_data);
             }
 
             //接続のクローズ
@@ -62,12 +62,12 @@ public class CarDBBean03 implements Serializable
             e.printStackTrace();
         }
     }
-    public Vector getData()
+    public Vector<Vector<String>> getData()
     {
         return data;
     }
-    public Vector getColname()
+    public Vector<String> getCol_name()
     {
-        return colname;
+        return col_name;
     }
 }

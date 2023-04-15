@@ -13,7 +13,7 @@ public class CarBeanService {
     public void execute(){
         CarDBBean myBean = new CarDBBean();
 
-        System.out.println(myBean.getColname());
+        System.out.println(myBean.getCol_name());
         System.out.println(myBean.getData());
 
         var data01 = myBean.getData();
@@ -28,7 +28,7 @@ public class CarBeanService {
 
         CarDBBean02 myBean02 = new CarDBBean02();
 
-        System.out.println(myBean02.getColname());
+        System.out.println(myBean02.getCol_name());
         System.out.println(myBean02.getData());
 
         ArrayList<Car_Row> data02;
@@ -45,7 +45,7 @@ public class CarBeanService {
 
         CarDBBean03 myBean03 = new CarDBBean03();
 
-        System.out.println(myBean03.getColname());
+        System.out.println(myBean03.getCol_name());
         System.out.println(myBean03.getData());
 
         var data03 = myBean03.getData();
