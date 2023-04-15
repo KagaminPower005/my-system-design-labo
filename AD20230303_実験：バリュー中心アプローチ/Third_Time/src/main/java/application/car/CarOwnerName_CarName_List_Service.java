@@ -10,17 +10,22 @@ public class CarOwnerName_CarName_List_Service {
     public void execute(){
         CarOwnerName_CarName_ListDBBean02 myBean02 = new CarOwnerName_CarName_ListDBBean02();
 
-//        System.out.println(myBean02.getColname());
-//        System.out.println(myBean02.getData());
+        System.out.println("------------------------------------------------------------");
+        System.out.println(myBean02.getColname());
+
+        System.out.println("------------------------------------------------------------");
 
         ArrayList<Car_owner_name_Car_name_List_Row> data02;
         data02 = myBean02.getData();
-
-        System.out.println(data02.size());
 
         IntStream.range(0, data02.size()).forEach(i -> {
             System.out.print("[" + data02.get(i).car_owner_name().value() + ", ");
             System.out.println(data02.get(i).car_name().value() + "]");
         });
+
+        System.out.println("------------------------------------------------------------");
+        System.out.println(data02.size());
+
+        System.out.println("------------------------------------------------------------");
     }
 }
