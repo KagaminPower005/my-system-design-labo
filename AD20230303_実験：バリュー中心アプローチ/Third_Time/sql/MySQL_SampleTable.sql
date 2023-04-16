@@ -1,4 +1,4 @@
-CREATE DATABASE carownerdb;
+CREATE DATABASE CarOwnerDb;
 use carownerdb;
 CREATE TABLE Car (Id int(10), Name varchar(50));
 INSERT INTO Car VALUES (2,'normal_car');
