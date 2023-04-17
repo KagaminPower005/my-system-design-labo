@@ -1,7 +1,7 @@
 package domain.sales.salesapproval.judgementwork;
 
 import domain.sales.salesapproval.checkwork.ApprovalCheckResultsChain;
-import support.MapStringKeySearch;
+import domain.support.MapStringKeySearch;
 import java.util.Map;
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
 package domain.sales.value.salesamount;
 
-import support.NotMatch;
+import domain.support.NotMatch;
 
 public record SalesAmount(double SalesAmount) {
     //※↓↓『ドメイン固有の値』のチェック↓↓

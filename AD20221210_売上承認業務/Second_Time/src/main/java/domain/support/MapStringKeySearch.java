@@ -1,4 +1,4 @@
-package support;
+package domain.support;
 
 import java.util.Map;
 
