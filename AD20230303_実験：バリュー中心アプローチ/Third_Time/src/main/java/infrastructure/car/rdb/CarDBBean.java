@@ -12,15 +12,8 @@ public class CarDBBean implements Serializable
     public CarDBBean()
     {
         try{
-            //接続の準備
-            String drv = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql:///CarOwnerDb";
-            String usr = "root";
-            String pw = "admin";
-
             //データベースへの接続
-            Class.forName(drv);
-            Connection cn = DriverManager.getConnection(url, usr, pw);
+            Connection cn = new DBConnection().getConnection();
 
             //問い合わせの準備
             Statement st = cn.createStatement();

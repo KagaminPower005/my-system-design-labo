@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 
 public class CarOwnerName_CarName_List_Service {
-    public String execute(){
+    public String draw(){
         CarOwnerName_CarName_List_DBBean02 myBean02 = new CarOwnerName_CarName_List_DBBean02();
 
         StringBuilder myList ;
