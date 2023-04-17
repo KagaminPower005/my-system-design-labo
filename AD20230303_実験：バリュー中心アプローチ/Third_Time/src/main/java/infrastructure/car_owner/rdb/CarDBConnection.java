@@ -3,11 +3,11 @@ package infrastructure.car_owner.rdb;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DBConnection {
+public class CarDBConnection {
 
     private Connection cn;
 
-    DBConnection(){
+    CarDBConnection(){
         try{
 
             //接続の準備

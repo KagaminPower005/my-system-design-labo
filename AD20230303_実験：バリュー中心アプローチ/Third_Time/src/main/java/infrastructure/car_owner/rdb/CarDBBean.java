@@ -1,5 +1,7 @@
 package infrastructure.car_owner.rdb;
 
+import infrastructure.support.rdb.DBClose;
+
 import java.util.*;
 import java.io.*;
 import java.sql.*;
@@ -13,7 +15,7 @@ public class CarDBBean implements Serializable
     {
         try{
             //データベースへの接続
-            Connection cn = new DBConnection().getConnection();
+            Connection cn = new CarDBConnection().getConnection();
 
             //問い合わせの準備
             Statement st = cn.createStatement();

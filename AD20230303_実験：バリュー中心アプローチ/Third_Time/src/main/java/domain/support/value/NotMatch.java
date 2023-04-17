@@ -1,4 +1,4 @@
-package support;
+package domain.support.value;
 
 public class NotMatch {
     private final int _max;

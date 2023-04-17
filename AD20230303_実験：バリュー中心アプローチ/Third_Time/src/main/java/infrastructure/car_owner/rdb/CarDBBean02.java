@@ -3,6 +3,7 @@ package infrastructure.car_owner.rdb;
 import domain.car_owner.value.car.Car_Row;
 import domain.car_owner.value.car.Id;
 import domain.car_owner.value.car.Name;
+import infrastructure.support.rdb.DBClose;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class CarDBBean02 implements Serializable
     {
         try{
             //データベースへの接続
-            Connection cn = new DBConnection().getConnection();
+            Connection cn = new CarDBConnection().getConnection();
 
             //問い合わせの準備
             Statement st = cn.createStatement();

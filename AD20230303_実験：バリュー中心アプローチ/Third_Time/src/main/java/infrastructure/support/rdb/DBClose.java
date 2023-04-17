@@ -1,11 +1,11 @@
-package infrastructure.car_owner.rdb;
+package infrastructure.support.rdb;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class DBClose {
-    DBClose(ResultSet rs, Statement st, Connection cn){
+    public DBClose(ResultSet rs, Statement st, Connection cn){
         try{
             rs.close();
             st.close();
