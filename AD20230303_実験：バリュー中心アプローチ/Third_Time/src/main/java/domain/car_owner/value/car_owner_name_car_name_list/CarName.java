@@ -1,9 +1,9 @@
-package domain.car.value.car_owner_name_car_name_list;
+package domain.car_owner.value.car_owner_name_car_name_list;
 
-import domain.car.value.car_owner.Name;
+import domain.car_owner.value.car.Name;
 import support.NotMatch;
 
-public record CarOwnerName(String name) {
+public record CarName(String name) {
 
     //※↓↓『ドメイン固有の値』のチェック↓↓
     public static final int MAX_VALUE = Name.MAX_VALUE;

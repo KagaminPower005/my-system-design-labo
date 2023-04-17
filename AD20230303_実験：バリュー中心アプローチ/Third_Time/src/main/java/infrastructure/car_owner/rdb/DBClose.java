@@ -1,4 +1,4 @@
-package infrastructure.car.rdb;
+package infrastructure.car_owner.rdb;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

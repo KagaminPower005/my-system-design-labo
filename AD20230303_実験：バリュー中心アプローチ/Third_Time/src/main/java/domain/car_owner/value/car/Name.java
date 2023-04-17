@@ -1,13 +1,12 @@
-package domain.car.value.car_owner_name_car_name_list;
+package domain.car_owner.value.car;
 
-import domain.car.value.car.Name;
 import support.NotMatch;
 
-public record CarName(String name) {
+public record Name(String name) {
 
     //※↓↓『ドメイン固有の値』のチェック↓↓
-    public static final int MAX_VALUE = Name.MAX_VALUE;
-    public static final int MIN_VALUE = Name.MIN_VALUE;
+    public static final int MAX_VALUE = 50;
+    public static final int MIN_VALUE = 0;
     //※↑↑『ドメイン固有の値』のチェック↑↑
 
     public Boolean isNotMatch(){

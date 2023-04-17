@@ -1,12 +1,13 @@
-package domain.car.value.car_owner;
+package domain.car_owner.value.car_owner_car_relation;
 
+import domain.car_owner.value.car_owner.Id;
 import support.NotMatch;
 
-public record Id(int id) {
+public record CarOwnerId(int id) {
 
     //※↓↓『ドメイン固有の値』のチェック↓↓
-    public static final int MAX_VALUE = 10;
-    public static final int MIN_VALUE = 0;
+    public static final int MAX_VALUE = Id.MAX_VALUE;
+    public static final int MIN_VALUE = Id.MIN_VALUE;
     //※↑↑『ドメイン固有の値』のチェック↑↑
 
     public Boolean isNotMatch(){

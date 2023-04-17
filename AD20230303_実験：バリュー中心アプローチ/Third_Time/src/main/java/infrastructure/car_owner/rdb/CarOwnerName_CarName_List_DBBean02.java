@@ -1,8 +1,8 @@
-package infrastructure.car.rdb;
+package infrastructure.car_owner.rdb;
 
-import domain.car.value.car_owner_name_car_name_list.CarName;
-import domain.car.value.car_owner_name_car_name_list.CarOwnerName;
-import domain.car.value.car_owner_name_car_name_list.CarOwnerName_CarName_List_Row;
+import domain.car_owner.value.car_owner_name_car_name_list.CarName;
+import domain.car_owner.value.car_owner_name_car_name_list.CarOwnerName;
+import domain.car_owner.value.car_owner_name_car_name_list.CarOwnerName_CarName_List_Row;
 
 import java.io.Serializable;
 import java.sql.*;
