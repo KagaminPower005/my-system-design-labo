@@ -9,6 +9,9 @@ public class User01 {
 
         CarListService myCarList = new CarListService();
 
+        System.out.println(myCarList.getClass()
+                .getSimpleName().replace("Service","."));
+
         System.out.print(myCarList.draw());
 
         System.out.println("------------------------------------------------------------");
@@ -16,6 +19,9 @@ public class User01 {
         CarOwnerName_CarName_List_Service
                 myCarOwnerName_CarName_List
                  = new CarOwnerName_CarName_List_Service();
+
+        System.out.println(myCarOwnerName_CarName_List
+                .getClass().getSimpleName().replace("_Service","."));
 
         System.out.print(myCarOwnerName_CarName_List.draw());
     }
