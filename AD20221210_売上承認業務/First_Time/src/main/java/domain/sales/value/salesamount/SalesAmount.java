@@ -1,4 +1,4 @@
-package domain.sales.items.salesamount;
+package domain.sales.value.salesamount;
 
 import support.NotMatch;
 

@@ -1,6 +1,6 @@
 package domain.sales.salesapproval.checkwork;
 
-import domain.sales.items.salesamount.SalesAmount;
+import domain.sales.value.salesamount.SalesAmount;
 
 public record MaximumSalesAmountCheck(SalesAmount SalesAmount)
         implements SalesApprovalChecks {

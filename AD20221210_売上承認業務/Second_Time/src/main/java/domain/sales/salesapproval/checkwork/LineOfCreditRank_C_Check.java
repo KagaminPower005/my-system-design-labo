@@ -1,7 +1,7 @@
 package domain.sales.salesapproval.checkwork;
 
 import domain.credit.lineofcredit.LineOfCreditRank;
-import domain.sales.items.salesamount.SalesAmount;
+import domain.sales.value.salesamount.SalesAmount;
 
 public record LineOfCreditRank_C_Check(SalesAmount Amount, LineOfCreditRank Rank)
         implements SalesApprovalChecks {

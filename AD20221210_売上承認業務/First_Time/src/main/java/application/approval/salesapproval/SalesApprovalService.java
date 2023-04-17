@@ -4,7 +4,7 @@ import domain.credit.blacklist.BlackListPersonRank;
 import domain.credit.exceptionlist.ExceptionPerson;
 import domain.sales.salesapproval.checkwork.*;
 import domain.sales.salesapproval.judgementwork.SalesApproval;
-import domain.sales.items.salesamount.SalesAmount;
+import domain.sales.value.salesamount.SalesAmount;
 import domain.credit.lineofcredit.LineOfCreditRank;
 import domain.sales.salesapproval.judgementwork.SalesApprovalJudgement;
 import support.Message;

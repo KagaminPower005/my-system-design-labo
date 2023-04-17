@@ -4,7 +4,7 @@ import application.approval.salesapproval.SalesApprovalService;
 import domain.credit.blacklist.BlackListPersonRank;
 import domain.credit.exceptionlist.ExceptionPerson;
 import domain.credit.lineofcredit.LineOfCreditRank;
-import domain.sales.items.salesamount.SalesAmount;
+import domain.sales.value.salesamount.SalesAmount;
 
 public class ApplicationOperator {
 
