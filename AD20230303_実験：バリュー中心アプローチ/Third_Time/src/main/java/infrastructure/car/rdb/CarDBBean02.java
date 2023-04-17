@@ -49,9 +49,7 @@ public class CarDBBean02 implements Serializable
             }
 
             //接続のクローズ
-            rs.close();
-            st.close();
-            cn.close();
+            new DBClose(rs,st,cn);
         }
         catch(Exception e){
             e.printStackTrace();

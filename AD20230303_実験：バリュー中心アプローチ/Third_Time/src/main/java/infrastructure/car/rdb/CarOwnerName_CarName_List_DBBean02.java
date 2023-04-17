@@ -58,11 +58,8 @@ public class CarOwnerName_CarName_List_DBBean02 implements Serializable
 
                 data.add(myCar_owner_name_Car_name_ListRow);
             }
-
             //接続のクローズ
-            rs.close();
-            st.close();
-            cn.close();
+            new DBClose(rs,st,cn);
         }
         catch(Exception e){
             e.printStackTrace();
