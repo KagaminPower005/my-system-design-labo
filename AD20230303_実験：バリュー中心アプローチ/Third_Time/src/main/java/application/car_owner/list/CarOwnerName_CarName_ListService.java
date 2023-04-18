@@ -6,7 +6,7 @@ import infrastructure.car_owner.rdb.bean.CarOwnerName_CarName_List_RowData;
 
 import java.util.ArrayList;
 
-public class CarOwnerName_CarName_List_Service {
+public class CarOwnerName_CarName_ListService {
     public String draw(){
         StringBuilder myList ;
 

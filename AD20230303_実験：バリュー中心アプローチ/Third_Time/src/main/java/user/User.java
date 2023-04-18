@@ -1,9 +1,9 @@
 package user;
 
 import application.car_owner.list.CarListService;
-import application.car_owner.list.CarOwnerName_CarName_List_Service;
+import application.car_owner.list.CarOwnerName_CarName_ListService;
 
-public class User01 {
+public class User {
 
     public static void main(String[] args){
 
@@ -16,12 +16,12 @@ public class User01 {
 
         System.out.println("------------------------------------------------------------");
 
-        CarOwnerName_CarName_List_Service
+        CarOwnerName_CarName_ListService
                 myCarOwnerName_CarName_List
-                 = new CarOwnerName_CarName_List_Service();
+                 = new CarOwnerName_CarName_ListService();
 
         System.out.println(myCarOwnerName_CarName_List
-                .getClass().getSimpleName().replace("_Service","."));
+                .getClass().getSimpleName().replace("Service","."));
 
         System.out.print(myCarOwnerName_CarName_List.draw());
     }

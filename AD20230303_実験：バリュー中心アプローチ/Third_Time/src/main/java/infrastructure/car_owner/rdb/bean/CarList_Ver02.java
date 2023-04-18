@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Vector;
 import java.sql.*;
 
-public class CarList02 implements Serializable
+public class CarList_Ver02 implements Serializable
 {
     private Vector<String> col_name;
     private ArrayList<Car_Row> data;
 
-    public CarList02()
+    public CarList_Ver02()
     {
         try{
             //データベースへの接続
