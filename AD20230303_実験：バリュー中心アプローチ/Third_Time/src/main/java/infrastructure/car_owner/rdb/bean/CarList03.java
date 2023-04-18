@@ -2,6 +2,7 @@ package infrastructure.car_owner.rdb.bean;
 
 import domain.car_owner.value.car.Id;
 import domain.car_owner.value.car.Name;
+import infrastructure.car_owner.rdb.sql.CarList_Query;
 import infrastructure.support.rdb.DBClose;
 
 import java.io.Serializable;
@@ -21,7 +22,7 @@ public class CarList03 implements Serializable
 
             //問い合わせの準備
             Statement st = cn.createStatement();
-            String qry = "SELECT * FROM car";
+            String qry = CarList_Query.get();
 
             //問い合わせ
             ResultSet rs = st.executeQuery(qry);
