@@ -1,13 +1,13 @@
-package infrastructure.car_owner.rdb;
+package infrastructure.car_owner.rdb.bean;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class CarDBConnection {
+public class CarOwnerDbConnection {
 
     private Connection cn;
 
-    CarDBConnection(){
+    public CarOwnerDbConnection(){
         try{
 
             //接続の準備
@@ -27,7 +27,7 @@ public class CarDBConnection {
 
     }
 
-    public Connection getConnection(){
+    public Connection get(){
         return cn;
     }
 }

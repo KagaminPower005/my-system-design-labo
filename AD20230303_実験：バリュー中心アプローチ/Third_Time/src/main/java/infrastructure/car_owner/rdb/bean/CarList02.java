@@ -1,4 +1,4 @@
-package infrastructure.car_owner.rdb;
+package infrastructure.car_owner.rdb.bean;
 
 import domain.car_owner.value.car.Car_Row;
 import domain.car_owner.value.car.Id;
@@ -10,16 +10,16 @@ import java.util.ArrayList;
 import java.util.Vector;
 import java.sql.*;
 
-public class CarDBBean02 implements Serializable
+public class CarList02 implements Serializable
 {
     private Vector<String> col_name;
     private ArrayList<Car_Row> data;
 
-    public CarDBBean02()
+    public CarList02()
     {
         try{
             //データベースへの接続
-            Connection cn = new CarDBConnection().getConnection();
+            Connection cn = new CarOwnerDbConnection().get();
 
             //問い合わせの準備
             Statement st = cn.createStatement();

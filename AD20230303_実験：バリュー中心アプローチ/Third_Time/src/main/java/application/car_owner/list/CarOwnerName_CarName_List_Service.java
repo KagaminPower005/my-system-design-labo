@@ -1,29 +1,35 @@
 package application.car_owner.list;
 
 import domain.car_owner.value.car_owner_name_car_name_list.CarOwnerName_CarName_List_Row;
-import infrastructure.car_owner.rdb.CarOwnerName_CarName_List_DBBean02;
+import infrastructure.car_owner.rdb.bean.CarOwnerName_CarName_List_ColName;
+import infrastructure.car_owner.rdb.bean.CarOwnerName_CarName_List_RowData;
 
 import java.util.ArrayList;
 
-
 public class CarOwnerName_CarName_List_Service {
     public String draw(){
-        CarOwnerName_CarName_List_DBBean02 myBean02 = new CarOwnerName_CarName_List_DBBean02();
-
         StringBuilder myList ;
 
         myList = new StringBuilder("------------------------------------------------------------\n");
 
-        myList.append(myBean02.getCol_name().toString())
-                .append("]\n");
+        //列名の取得
+        CarOwnerName_CarName_List_ColName
+                myColName = new CarOwnerName_CarName_List_ColName();
+
+        myList.append(myColName.get().toString())
+                .append("\n");
 
         myList.append("------------------------------------------------------------\n");
 
-        ArrayList<CarOwnerName_CarName_List_Row> data02;
-        data02 = myBean02.getData();
+        //行データの取得
+        CarOwnerName_CarName_List_RowData
+                myRowData = new CarOwnerName_CarName_List_RowData();
+
+        ArrayList<CarOwnerName_CarName_List_Row> myListRow;
+        myListRow = myRowData.get();
 
         for (CarOwnerName_CarName_List_Row
-                carOwnerName_carName_list_row : data02) {
+                carOwnerName_carName_list_row : myListRow) {
             myList.append("[")
                     .append(carOwnerName_carName_list_row.car_owner_name().value())
                     .append(" ,");
@@ -33,7 +39,7 @@ public class CarOwnerName_CarName_List_Service {
 
         myList.append("------------------------------------------------------------\n");
 
-        myList.append(data02.size())
+        myList.append(myListRow.size())
                 .append("\n");
 
         myList.append("------------------------------------------------------------\n");

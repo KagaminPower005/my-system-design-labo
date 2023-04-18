@@ -1,9 +1,9 @@
 package application.car_owner.list;
 
 import domain.car_owner.value.car.Car_Row;
-import infrastructure.car_owner.rdb.CarDBBean;
-import infrastructure.car_owner.rdb.CarDBBean02;
-import infrastructure.car_owner.rdb.CarDBBean03;
+import infrastructure.car_owner.rdb.bean.CarList;
+import infrastructure.car_owner.rdb.bean.CarList02;
+import infrastructure.car_owner.rdb.bean.CarList03;
 
 import java.util.ArrayList;
 import java.util.stream.IntStream;
@@ -14,7 +14,7 @@ public class CarListService {
 
         StringBuilder myList ;
 
-        CarDBBean myBean = new CarDBBean();
+        CarList myBean = new CarList();
 
         myList = new StringBuilder("------------------------------------------------------------\n");
 
@@ -31,7 +31,7 @@ public class CarListService {
 
         myList.append("------------------------------------------------------------\n");
 
-        CarDBBean02 myBean02 = new CarDBBean02();
+        CarList02 myBean02 = new CarList02();
 
         myList.append(myBean02.getCol_name()).append("\n");
         myList.append(myBean02.getData()).append("\n");
@@ -48,7 +48,7 @@ public class CarListService {
 
         myList.append("------------------------------------------------------------\n");
 
-        CarDBBean03 myBean03 = new CarDBBean03();
+        CarList03 myBean03 = new CarList03();
 
         myList.append(myBean03.getCol_name()).append("\n");
         myList.append(myBean03.getData()).append("\n");

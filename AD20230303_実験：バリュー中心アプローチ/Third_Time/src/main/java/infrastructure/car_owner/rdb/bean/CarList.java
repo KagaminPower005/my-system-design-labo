@@ -1,4 +1,4 @@
-package infrastructure.car_owner.rdb;
+package infrastructure.car_owner.rdb.bean;
 
 import infrastructure.support.rdb.DBClose;
 
@@ -6,16 +6,16 @@ import java.util.*;
 import java.io.*;
 import java.sql.*;
 
-public class CarDBBean implements Serializable
+public class CarList implements Serializable
 {
     private Vector<String> col_name;
     private Vector<Vector<String>> data;
 
-    public CarDBBean()
+    public CarList()
     {
         try{
             //データベースへの接続
-            Connection cn = new CarDBConnection().getConnection();
+            Connection cn = new CarOwnerDbConnection().get();
 
             //問い合わせの準備
             Statement st = cn.createStatement();
