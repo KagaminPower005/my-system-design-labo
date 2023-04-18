@@ -7,7 +7,7 @@ import domain.sales.salesapproval.judgementwork.SalesApproval;
 import domain.sales.value.salesamount.SalesAmount;
 import domain.credit.lineofcredit.LineOfCreditRank;
 import domain.sales.salesapproval.judgementwork.SalesApprovalJudgement;
-import domain.support.Message;
+import domain.support.value.Message;
 
 public class SalesApprovalService {
 

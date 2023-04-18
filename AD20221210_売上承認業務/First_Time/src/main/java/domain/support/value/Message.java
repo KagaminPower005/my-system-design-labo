@@ -1,4 +1,4 @@
-package domain.support;
+package domain.support.value;
 
 public record Message(String myMessage) {
     //※↓↓『ドメイン固有の値』のチェック↓↓
