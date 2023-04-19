@@ -3,6 +3,7 @@ package infrastructure.car_owner.rdb.bean;
 import domain.car_owner.value.car_owner_name_car_name_list.CarName;
 import domain.car_owner.value.car_owner_name_car_name_list.CarOwnerName;
 import domain.car_owner.value.car_owner_name_car_name_list.CarOwnerName_CarName_List_Row;
+import infrastructure.car_owner.rdb.connection.CarOwnerDbConnection;
 import infrastructure.car_owner.rdb.sql.CarOwnerName_CarName_List_Query;
 import infrastructure.support.rdb.DBClose;
 

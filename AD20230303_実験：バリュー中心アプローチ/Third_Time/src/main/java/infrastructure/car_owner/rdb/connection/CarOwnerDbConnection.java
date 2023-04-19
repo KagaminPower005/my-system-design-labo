@@ -1,4 +1,4 @@
-package infrastructure.car_owner.rdb.bean;
+package infrastructure.car_owner.rdb.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

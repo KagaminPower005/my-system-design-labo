@@ -1,5 +1,6 @@
 package infrastructure.car_owner.rdb.bean;
 
+import infrastructure.car_owner.rdb.connection.CarOwnerDbConnection;
 import infrastructure.car_owner.rdb.sql.CarList_Query;
 import infrastructure.support.rdb.DBClose;
 
