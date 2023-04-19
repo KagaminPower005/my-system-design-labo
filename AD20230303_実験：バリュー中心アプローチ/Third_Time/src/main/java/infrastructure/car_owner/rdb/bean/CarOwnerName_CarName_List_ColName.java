@@ -28,12 +28,12 @@ public class CarOwnerName_CarName_List_ColName implements Serializable
             //問い合わせ
             ResultSet rs = st.executeQuery(qry);
 
-            //列名の取得
+            //列数の取得
             ResultSetMetaData rm = rs.getMetaData();
             int col_num = rm.getColumnCount();
-            colName = new Vector<>(col_num);
 
             //列名の取得
+            colName = new Vector<>(col_num);
             for(int i=1; i<=col_num; i++){
                 colName.addElement(rm.getColumnName(i));
             }

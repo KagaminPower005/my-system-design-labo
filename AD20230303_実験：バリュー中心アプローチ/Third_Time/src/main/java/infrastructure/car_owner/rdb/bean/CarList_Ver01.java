@@ -29,9 +29,9 @@ public class CarList_Ver01 implements Serializable
             //列数の取得
             ResultSetMetaData rm = rs.getMetaData();
             int col_num = rm.getColumnCount();
-            col_name = new Vector<>(col_num);
 
             //列名の取得
+            col_name = new Vector<>(col_num);
             for(int i=1; i<=col_num; i++){
                 col_name.addElement(rm.getColumnName(i));
             }
