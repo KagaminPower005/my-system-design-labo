@@ -1,6 +1,6 @@
 package infrastructure.car_owner.rdb.data;
 
-import domain.car_owner.value.car.Car_Record;
+import domain.car_owner.value.car.Car_Row;
 import domain.car_owner.value.car.Id;
 import domain.car_owner.value.car.Name;
 import infrastructure.car_owner.rdb.connection.CarOwnerDbConnection;
@@ -15,7 +15,7 @@ import java.sql.*;
 public class CarList_Ver02 implements Serializable
 {
     private Vector<String> col_name;
-    private ArrayList<Car_Record> data;
+    private ArrayList<Car_Row> data;
 
     public CarList_Ver02()
     {
@@ -46,7 +46,7 @@ public class CarList_Ver02 implements Serializable
 
                 Id myId = new Id(rs.getInt(Id.class.getSimpleName()));
                 Name myName = new Name(rs.getString(Name.class.getSimpleName()));
-                Car_Record myCar_tableRow = new Car_Record(myId,myName);
+                Car_Row myCar_tableRow = new Car_Row(myId,myName);
 
                 data.add(myCar_tableRow);
             }
@@ -58,7 +58,7 @@ public class CarList_Ver02 implements Serializable
             e.printStackTrace();
         }
     }
-    public ArrayList<Car_Record> getData()
+    public ArrayList<Car_Row> getData()
     {
         return data;
     }

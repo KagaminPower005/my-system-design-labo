@@ -3,7 +3,7 @@ package application.car_owner.service.list;
 import application.car_owner.factory.CarListFactory;
 import application.car_owner.factory.CarListDataWrapper;
 import application.car_owner.repository.CarListRepository;
-import domain.car_owner.value.car.Car_Record;
+import domain.car_owner.value.car.Car_Row;
 import infrastructure.car_owner.rdb.data.CarList_Ver03;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class CarListService {
         myList.append(myBean02.getCol_name()).append("\n");
         myList.append(myBean02.getData()).append("\n");
 
-        ArrayList<Car_Record> data02;
+        ArrayList<Car_Row> data02;
         data02 = myBean02.getData();
 
         IntStream.range(0, data02.size()).forEach(i -> {

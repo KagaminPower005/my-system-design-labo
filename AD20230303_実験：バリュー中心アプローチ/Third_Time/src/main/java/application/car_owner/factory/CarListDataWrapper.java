@@ -1,6 +1,6 @@
 package application.car_owner.factory;
 
-import domain.car_owner.value.car.Car_Record;
+import domain.car_owner.value.car.Car_Row;
 import infrastructure.car_owner.rdb.data.CarList_Ver02;
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ public class CarListDataWrapper {
 
     private final CarList_Ver02 myBean02 = new CarList_Ver02();
 
-    public ArrayList<Car_Record> getData()
+    public ArrayList<Car_Row> getData()
     {
         return myBean02.getData();
     }

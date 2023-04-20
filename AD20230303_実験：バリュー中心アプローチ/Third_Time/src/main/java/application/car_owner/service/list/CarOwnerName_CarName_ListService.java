@@ -1,6 +1,6 @@
 package application.car_owner.service.list;
 
-import domain.car_owner.value.car_owner_name_car_name_list.CarOwnerName_CarName_List_Record;
+import domain.car_owner.value.car_owner_name_car_name_list.CarOwnerName_CarName_List_Row;
 import infrastructure.car_owner.rdb.data.CarOwnerName_CarName_List_ColName;
 import infrastructure.car_owner.rdb.data.CarOwnerName_CarName_List_RowData;
 
@@ -25,15 +25,15 @@ public class CarOwnerName_CarName_ListService {
         CarOwnerName_CarName_List_RowData
                 myRowData = new CarOwnerName_CarName_List_RowData();
 
-        ArrayList<CarOwnerName_CarName_List_Record> myListRow;
+        ArrayList<CarOwnerName_CarName_List_Row> myListRow;
         myListRow = myRowData.get();
 
-        for (CarOwnerName_CarName_List_Record
-                carOwnerName_carName_list_rec : myListRow) {
+        for (CarOwnerName_CarName_List_Row
+                carOwnerName_carName_list_row : myListRow) {
             myList.append("[")
-                    .append(carOwnerName_carName_list_rec.car_owner_name().value())
+                    .append(carOwnerName_carName_list_row.car_owner_name().value())
                     .append(" ,");
-            myList.append(carOwnerName_carName_list_rec.car_name().value())
+            myList.append(carOwnerName_carName_list_row.car_name().value())
                     .append("]\n");
         }
 
