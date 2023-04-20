@@ -1,5 +1,6 @@
 package infrastructure.car_owner.rdb.bean;
 
+import application.car_owner.repository.CarListRepository;
 import infrastructure.car_owner.rdb.connection.CarOwnerDbConnection;
 import infrastructure.car_owner.rdb.sql.CarList_Query;
 import infrastructure.support.rdb.DBClose;
@@ -8,7 +9,7 @@ import java.util.*;
 import java.io.*;
 import java.sql.*;
 
-public class CarList_Ver01 implements Serializable
+public class CarList_Ver01 implements Serializable, CarListRepository
 {
     private Vector<String> col_name;
     private Vector<Vector<String>> data;

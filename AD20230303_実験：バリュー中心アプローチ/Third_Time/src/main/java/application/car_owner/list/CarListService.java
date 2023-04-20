@@ -1,7 +1,8 @@
 package application.car_owner.list;
 
+import application.car_owner.factory.CarListFactory;
+import application.car_owner.repository.CarListRepository;
 import domain.car_owner.value.car.Car_Row;
-import infrastructure.car_owner.rdb.bean.CarList_Ver01;
 import infrastructure.car_owner.rdb.bean.CarList_Ver02;
 import infrastructure.car_owner.rdb.bean.CarList_Ver03;
 
@@ -14,7 +15,7 @@ public class CarListService {
 
         StringBuilder myList ;
 
-        CarList_Ver01 myBean = new CarList_Ver01();
+        CarListRepository myBean = new CarListFactory().create();
 
         myList = new StringBuilder("------------------------------------------------------------\n");
 
