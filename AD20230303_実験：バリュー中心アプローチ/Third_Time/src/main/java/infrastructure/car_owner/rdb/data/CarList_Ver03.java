@@ -1,20 +1,22 @@
-package infrastructure.car_owner.rdb.bean;
+package infrastructure.car_owner.rdb.data;
 
 import application.car_owner.repository.CarListRepository;
+import domain.car_owner.value.car.Id;
+import domain.car_owner.value.car.Name;
 import infrastructure.car_owner.rdb.connection.CarOwnerDbConnection;
 import infrastructure.car_owner.rdb.sql.CarList_Query;
 import infrastructure.support.rdb.DBClose;
 
-import java.util.*;
-import java.io.*;
+import java.io.Serializable;
+import java.util.Vector;
 import java.sql.*;
 
-public class CarList_Ver01 implements Serializable, CarListRepository
+public class CarList_Ver03 implements Serializable, CarListRepository
 {
     private Vector<String> col_name;
     private Vector<Vector<String>> data;
 
-    public CarList_Ver01()
+    public CarList_Ver03()
     {
         try{
             //データベースへの接続
@@ -41,9 +43,10 @@ public class CarList_Ver01 implements Serializable, CarListRepository
             data = new Vector<>();
             while(rs.next()){
                 Vector<String> row_data = new Vector<>();
-                for(int i=1; i<=col_num; i++){
-                    row_data.addElement(rs.getObject(i).toString());
-                }
+
+                row_data.addElement(rs.getObject(Id.class.getSimpleName()).toString());
+                row_data.addElement(rs.getObject(Name.class.getSimpleName()).toString());
+
                 data.addElement(row_data);
             }
 

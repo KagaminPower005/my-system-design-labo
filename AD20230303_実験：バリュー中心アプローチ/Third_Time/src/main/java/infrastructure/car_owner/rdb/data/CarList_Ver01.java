@@ -1,23 +1,20 @@
-package infrastructure.car_owner.rdb.bean;
+package infrastructure.car_owner.rdb.data;
 
-import domain.car_owner.value.car.Car_Row;
-import domain.car_owner.value.car.Id;
-import domain.car_owner.value.car.Name;
+import application.car_owner.repository.CarListRepository;
 import infrastructure.car_owner.rdb.connection.CarOwnerDbConnection;
 import infrastructure.car_owner.rdb.sql.CarList_Query;
 import infrastructure.support.rdb.DBClose;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Vector;
+import java.util.*;
+import java.io.*;
 import java.sql.*;
 
-public class CarList_Ver02 implements Serializable
+public class CarList_Ver01 implements Serializable, CarListRepository
 {
     private Vector<String> col_name;
-    private ArrayList<Car_Row> data;
+    private Vector<Vector<String>> data;
 
-    public CarList_Ver02()
+    public CarList_Ver01()
     {
         try{
             //データベースへの接続
@@ -41,14 +38,13 @@ public class CarList_Ver02 implements Serializable
             }
 
             //行の取得
-            data = new ArrayList<>();
+            data = new Vector<>();
             while(rs.next()){
-
-                Id myId = new Id(rs.getInt(Id.class.getSimpleName()));
-                Name myName = new Name(rs.getString(Name.class.getSimpleName()));
-                Car_Row myCar_tableRow = new Car_Row(myId,myName);
-
-                data.add(myCar_tableRow);
+                Vector<String> row_data = new Vector<>();
+                for(int i=1; i<=col_num; i++){
+                    row_data.addElement(rs.getObject(i).toString());
+                }
+                data.addElement(row_data);
             }
 
             //接続のクローズ
@@ -58,7 +54,7 @@ public class CarList_Ver02 implements Serializable
             e.printStackTrace();
         }
     }
-    public ArrayList<Car_Row> getData()
+    public Vector<Vector<String>> getData()
     {
         return data;
     }

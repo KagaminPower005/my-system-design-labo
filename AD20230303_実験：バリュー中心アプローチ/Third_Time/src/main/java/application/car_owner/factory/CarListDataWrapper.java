@@ -1,7 +1,7 @@
 package application.car_owner.factory;
 
 import domain.car_owner.value.car.Car_Row;
-import infrastructure.car_owner.rdb.bean.CarList_Ver02;
+import infrastructure.car_owner.rdb.data.CarList_Ver02;
 
 import java.util.ArrayList;
 import java.util.Vector;

@@ -1,4 +1,4 @@
-package infrastructure.car_owner.rdb.bean;
+package infrastructure.car_owner.rdb.data;
 
 import domain.car_owner.value.car_owner_name_car_name_list.CarName;
 import domain.car_owner.value.car_owner_name_car_name_list.CarOwnerName;

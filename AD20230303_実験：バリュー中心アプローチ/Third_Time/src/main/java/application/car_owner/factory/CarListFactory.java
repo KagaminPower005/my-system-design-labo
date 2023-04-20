@@ -1,7 +1,7 @@
 package application.car_owner.factory;
 
 import application.car_owner.repository.CarListRepository;
-import infrastructure.car_owner.rdb.bean.CarList_Ver01;
+import infrastructure.car_owner.rdb.data.CarList_Ver01;
 
 public class CarListFactory {
 

@@ -4,7 +4,7 @@ import application.car_owner.factory.CarListFactory;
 import application.car_owner.factory.CarListDataWrapper;
 import application.car_owner.repository.CarListRepository;
 import domain.car_owner.value.car.Car_Row;
-import infrastructure.car_owner.rdb.bean.CarList_Ver03;
+import infrastructure.car_owner.rdb.data.CarList_Ver03;
 
 import java.util.ArrayList;
 import java.util.stream.IntStream;

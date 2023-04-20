@@ -1,4 +1,4 @@
-package infrastructure.car_owner.rdb.bean;
+package infrastructure.car_owner.rdb.data;
 
 import infrastructure.car_owner.rdb.connection.CarOwnerDbConnection;
 import infrastructure.car_owner.rdb.sql.CarOwnerName_CarName_List_Query;
