@@ -1,4 +1,4 @@
-package application.car_owner.list;
+package application.car_owner.service.list;
 
 import application.car_owner.factory.CarListFactory;
 import application.car_owner.repository.CarListRepository;
