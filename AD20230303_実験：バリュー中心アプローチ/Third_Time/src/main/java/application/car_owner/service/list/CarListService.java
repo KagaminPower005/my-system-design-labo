@@ -1,7 +1,7 @@
 package application.car_owner.service.list;
 
 import application.car_owner.factory.CarListFactory;
-import application.car_owner.factory.CarListWrapper;
+import application.car_owner.factory.CarListDataWrapper;
 import application.car_owner.repository.CarListRepository;
 import domain.car_owner.value.car.Car_Row;
 import infrastructure.car_owner.rdb.bean.CarList_Ver03;
@@ -32,7 +32,7 @@ public class CarListService {
 
         myList.append("------------------------------------------------------------\n");
 
-        CarListWrapper myBean02 = new CarListWrapper();
+        CarListDataWrapper myBean02 = new CarListDataWrapper();
 
         myList.append(myBean02.getCol_name()).append("\n");
         myList.append(myBean02.getData()).append("\n");

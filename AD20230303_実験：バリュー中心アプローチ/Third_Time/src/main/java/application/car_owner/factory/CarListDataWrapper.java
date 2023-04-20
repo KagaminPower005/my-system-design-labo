@@ -6,7 +6,7 @@ import infrastructure.car_owner.rdb.bean.CarList_Ver02;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class CarListWrapper {
+public class CarListDataWrapper {
 
     private final CarList_Ver02 myBean02 = new CarList_Ver02();
 
