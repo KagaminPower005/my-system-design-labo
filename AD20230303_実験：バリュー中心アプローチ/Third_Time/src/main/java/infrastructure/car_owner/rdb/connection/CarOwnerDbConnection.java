@@ -27,7 +27,5 @@ public class CarOwnerDbConnection {
 
     }
 
-    public Connection get(){
-        return cn;
-    }
+    public Connection get(){ return cn; }
 }
