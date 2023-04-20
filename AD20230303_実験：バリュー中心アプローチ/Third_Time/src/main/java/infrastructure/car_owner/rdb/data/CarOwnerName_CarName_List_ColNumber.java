@@ -9,13 +9,12 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
-import java.util.Vector;
 
-public class CarOwnerName_CarName_List_ColName implements Serializable
+public class CarOwnerName_CarName_List_ColNumber implements Serializable
 {
-    private Vector<String> colName;
+    private int col_num;
 
-    public CarOwnerName_CarName_List_ColName()
+    public CarOwnerName_CarName_List_ColNumber()
     {
         try{
             //データベースへの接続
@@ -29,15 +28,8 @@ public class CarOwnerName_CarName_List_ColName implements Serializable
             ResultSet rs = st.executeQuery(qry);
 
             //列数の取得
-            int col_num
-                    = new CarOwnerName_CarName_List_ColNumber().get();
-
-            //列名の取得
             ResultSetMetaData rm = rs.getMetaData();
-            colName = new Vector<>(col_num);
-            for(int i=1; i<=col_num; i++){
-                colName.addElement(rm.getColumnName(i));
-            }
+            col_num = rm.getColumnCount();
 
             //接続のクローズ
             new DBClose(rs,st,cn);
@@ -46,8 +38,8 @@ public class CarOwnerName_CarName_List_ColName implements Serializable
             e.printStackTrace();
         }
     }
-    public Vector<String> get()
+    public Integer get()
     {
-        return colName;
+        return col_num;
     }
 }
