@@ -1,7 +1,7 @@
 package domain.sales.salesapproval.checkwork;
 
-import domain.credit.exceptionlist.ExceptionPerson;
-import domain.credit.lineofcredit.LineOfCreditRank;
+import domain.credit.value.exceptionlist.ExceptionPerson;
+import domain.credit.value.lineofcredit.LineOfCreditRank;
 
 public record ExceptionPersonList_Check(ExceptionPerson ExceptionRank, LineOfCreditRank CreditRank)
         implements SalesApprovalChecks {

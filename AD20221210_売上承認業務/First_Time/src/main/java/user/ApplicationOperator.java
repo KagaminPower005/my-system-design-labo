@@ -1,9 +1,9 @@
 package user;
 
 import application.approval.salesapproval.SalesApprovalService;
-import domain.credit.blacklist.BlackListPersonRank;
-import domain.credit.exceptionlist.ExceptionPerson;
-import domain.credit.lineofcredit.LineOfCreditRank;
+import domain.credit.value.blacklist.BlackListPersonRank;
+import domain.credit.value.exceptionlist.ExceptionPerson;
+import domain.credit.value.lineofcredit.LineOfCreditRank;
 import domain.sales.value.salesamount.SalesAmount;
 
 public class ApplicationOperator {

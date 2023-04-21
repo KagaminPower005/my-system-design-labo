@@ -1,11 +1,11 @@
 package application.approval.salesapproval;
 
-import domain.credit.blacklist.BlackListPersonRank;
-import domain.credit.exceptionlist.ExceptionPerson;
+import domain.credit.value.blacklist.BlackListPersonRank;
+import domain.credit.value.exceptionlist.ExceptionPerson;
 import domain.sales.salesapproval.checkwork.*;
 import domain.sales.salesapproval.judgementwork.SalesApproval;
 import domain.sales.value.salesamount.SalesAmount;
-import domain.credit.lineofcredit.LineOfCreditRank;
+import domain.credit.value.lineofcredit.LineOfCreditRank;
 import domain.sales.salesapproval.judgementwork.SalesApprovalJudgement;
 import domain.support.value.Message;
 
