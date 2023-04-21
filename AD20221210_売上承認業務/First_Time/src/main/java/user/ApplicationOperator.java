@@ -143,7 +143,7 @@ public class ApplicationOperator {
 
         // 結果をコンソールに出力
         System.out.println( "売上金額   :"
-                + String.format("%,d",myMoney.value().intValue())
+                + myMoney.formattedValue()
                 + SalesAmount.CURRENCY.toJapanese());
 
         System.out.println( "与信枠ランク:"
