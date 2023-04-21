@@ -1,8 +1,8 @@
 package domain.support.value;
 
 public enum Currency {
-    Yen
+    Yen,
     ;
 
-    public String toString(){ return "円"; }
+    public String toJapanese(){ return "円"; }
 }

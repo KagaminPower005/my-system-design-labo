@@ -4,5 +4,5 @@ public enum Currency {
     Yen
     ;
 
-    public String toString(){ return "円"; }
+    public String toJapanese(){ return "円"; }
 }
