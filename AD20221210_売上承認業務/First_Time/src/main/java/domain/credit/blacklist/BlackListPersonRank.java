@@ -1,4 +1,4 @@
-package domain.credit.value.blacklist;
+package domain.credit.blacklist;
 
 public enum BlackListPersonRank {
     S,

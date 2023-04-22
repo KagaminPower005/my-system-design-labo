@@ -1,4 +1,4 @@
-package domain.credit.value.exceptionlist;
+package domain.credit.exceptionlist;
 
 public enum ExceptionPerson {
     TRUE,

@@ -1,7 +1,7 @@
 package domain.sales.salesapproval.checkwork;
 
-import domain.credit.value.blacklist.BlackListPersonRank;
-import domain.credit.value.lineofcredit.LineOfCreditRank;
+import domain.credit.blacklist.BlackListPersonRank;
+import domain.credit.lineofcredit.LineOfCreditRank;
 
 public record UnBlackListPerson_Check(BlackListPersonRank BlackRank, LineOfCreditRank CreditRank)
         implements SalesApprovalChecks {

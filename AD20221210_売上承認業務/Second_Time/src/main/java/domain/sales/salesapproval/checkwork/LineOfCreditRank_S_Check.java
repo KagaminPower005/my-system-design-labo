@@ -1,6 +1,6 @@
 package domain.sales.salesapproval.checkwork;
 
-import domain.credit.value.lineofcredit.LineOfCreditRank;
+import domain.credit.lineofcredit.LineOfCreditRank;
 
 public record LineOfCreditRank_S_Check(LineOfCreditRank Rank)
         implements SalesApprovalChecks {

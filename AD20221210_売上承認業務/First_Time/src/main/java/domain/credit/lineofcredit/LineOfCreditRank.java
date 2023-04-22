@@ -1,4 +1,4 @@
-package domain.credit.value.lineofcredit;
+package domain.credit.lineofcredit;
 
 public enum LineOfCreditRank {
     S,
