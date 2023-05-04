@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jdbc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AD20230303_実験：バリュー中心アプローチ/Forth_Time/jdbc/mysql-connector-java-3.1.10.zip!/" />
+      <root url="jar://$PROJECT_DIR$/AD20230303_実験：バリュー中心アプローチ/Forth_Time/jdbc/mysql-connector-java-3.1.10-bin-g.jar!/" />
+      <root url="jar://$PROJECT_DIR$/AD20230303_実験：バリュー中心アプローチ/Forth_Time/jdbc/mysql-connector-java-3.1.10-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
