@@ -13,6 +13,7 @@ public class CarOwnerName_CarName_List_Query {
                 From Car a
                  Join CarOwner_Car_Relation b on a.Id = b.CarId
                  Join CarOwner c on c.Id = b.CarOwnerId
+                Order By b.CarOwnerId,a.Id
                 """
                 .replace("@1",CarOwnerName.class.getSimpleName())
                 .replace("@2",CarName.class.getSimpleName())
