@@ -7,7 +7,7 @@ public class SalesApprovalJudgementMatrix {
 
     private final Map<String, SalesApproval> JudgementMatrix = new HashMap<>();
 
-    public SalesApprovalJudgementMatrix(){ }
+    SalesApprovalJudgementMatrix(){ }
 
     final Map<String, SalesApproval> make() {
 
