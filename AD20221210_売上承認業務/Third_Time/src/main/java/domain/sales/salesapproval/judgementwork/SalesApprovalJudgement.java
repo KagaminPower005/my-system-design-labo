@@ -18,9 +18,9 @@ public class SalesApprovalJudgement {
     //※『SalesApproval』は『Enum』による『判定結果値』
     public final SalesApproval judge() {
         // パラメータの準備
-        Map<String, SalesApproval> myMap = new SalesApprovalJudgementMatrix().make();
+        Map<String, SalesApproval> myMap = new SalesApprovalMatchMatrix().make();
         String myMapKey                  = this.checkResultsChain.toString();
-        Character mySingleLikeChar       = SalesApprovalJudgementMatrix.mySingleWildChar();
+        Character mySingleLikeChar       = SalesApprovalMatchMatrix.mySingleWildChar();
 
         SalesApproval mySalesApproval
                 = (SalesApproval)

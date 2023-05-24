@@ -2,7 +2,7 @@ package domain.sales.salesapproval.checkwork;
 
 import java.util.ArrayList;
 import java.util.List;
-import domain.sales.salesapproval.judgementwork.SalesApprovalJudgementMatrix;
+import domain.sales.salesapproval.judgementwork.SalesApprovalMatchMatrix;
 
 public class ApprovalCheckResultsChain {
     private final List<CheckResult>
@@ -14,7 +14,7 @@ public class ApprovalCheckResultsChain {
 
     private StringBuilder execute() {
         final Character myResultsSeparator
-                = SalesApprovalJudgementMatrix.mySeparatorChar();
+                = SalesApprovalMatchMatrix.mySeparatorChar();
         StringBuilder myCheckResultsChain = new StringBuilder();
         for (CheckResult checkResult : myList) {
             myCheckResultsChain
